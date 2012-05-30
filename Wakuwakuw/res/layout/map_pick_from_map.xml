@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+    
+    <LinearLayout 
+        style="@android:style/ButtonBar"
+        android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical">
+        
+        <LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:layout_marginBottom="3dip">
+	        
+			<AutoCompleteTextView
+			    android:id="@+id/autoFindPlacePickFromMap"
+				android:layout_width="0dip"
+				android:layout_height="40dip"
+				android:completionThreshold="3"
+				android:layout_weight="1"
+				android:singleLine="true"
+				android:hint="Type the place"
+				android:layout_marginRight="3dip" />
+			
+			<Button
+			    android:id="@+id/buttonSearchPlacePickFromMap"
+				android:layout_width="wrap_content"
+				android:layout_height="40dip"
+				android:text="Find" />
+		</LinearLayout>
+        
+        <LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal">
+	        
+			<Button
+			    android:id="@+id/buttonConfirmPickFromMap"
+				android:layout_width="0dip"
+				android:layout_height="40dip"
+				android:layout_weight="1"
+				android:text="Confirm" />
+			
+			<Button
+			    android:id="@+id/buttonCancelPickFromMap"
+				android:layout_width="0dip"
+				android:layout_height="40dip"
+				android:layout_weight="1"
+				android:text="Cancel" />
+		</LinearLayout>
+    </LinearLayout>
+    
+    
+    
+    <com.google.android.maps.MapView 
+        android:id="@+id/mapPickFromMap"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:clickable="true"
+	    android:apiKey="0wUjrxrMXeXnL8qbUtkt7wZ_Y6-XTj5UmtrqyYQ" />
+
+</LinearLayout>

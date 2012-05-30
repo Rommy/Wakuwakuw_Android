@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+		android:id="@+id/headerDetailUser"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="#DDDDDC">
+				
+		<ImageButton
+			android:id="@+id/imgButtonBack" android:layout_width="60dip"
+			android:scaleType="fitCenter" android:layout_height="65dip"
+			android:background="@drawable/actionbar_btn" 
+			android:layout_centerVertical="true"
+			android:singleLine="true"
+			android:padding="5dip"
+			android:layout_alignParentLeft="true"
+			android:src="@drawable/back" />
+		
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="65dip"
+			android:id="@+id/imgViewSeparatorUserDetail"
+			android:src="@drawable/actionbar_separator"
+			android:layout_centerVertical="true"
+			android:layout_toRightOf="@+id/imgButtonBack"
+			android:scaleType="fitCenter" />
+	    		
+		<TextView
+		    android:id="@+id/txtViewHeaderUserProfile"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="User Profile"
+			android:textSize="24sp"
+			android:textColor="#000000"
+			android:gravity="center_horizontal"
+			android:layout_centerInParent="true"
+			android:layout_toRightOf="@+id/imgViewSeparatorUserDetail"
+			android:layout_marginLeft="3dip" />
+		
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="65dip"
+			android:id="@+id/imgViewSeparatorUserDetail2"
+			android:src="@drawable/actionbar_separator"
+			android:layout_centerVertical="true"
+			android:layout_toLeftOf="@+id/imgButtonOptionUserProfile"
+			android:scaleType="fitCenter" />
+		
+		<ImageButton
+			android:id="@+id/imgButtonOptionUserProfile" android:layout_width="60dip"
+			android:scaleType="fitCenter" android:layout_height="65dip"
+			android:background="@drawable/actionbar_btn" 
+			android:layout_centerVertical="true"
+			android:singleLine="true"
+			android:padding="5dip"
+			android:layout_alignParentRight="true"
+			android:src="@drawable/gear_green" />
+	</RelativeLayout>
+    
+    
+	<ScrollView
+	    android:id="@+id/scrollViewFormUserProfile"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="#FFFFFFFF">
+    
+		<RelativeLayout 
+		   	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:paddingLeft="5dip"
+		    android:paddingRight="5dip"
+		    android:paddingBottom="5dip"
+		    android:background="#FFFFFFFF" >
+		    
+		    <RelativeLayout 
+			    android:id="@+id/containerUserPhoto"
+			    android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content">
+		        
+		        <ImageView
+					android:id="@+id/imgDepanUserProfile"
+					android:layout_width="160dip"
+					android:layout_height="160dip"
+					android:src="@drawable/user_info"
+					android:layout_alignParentTop="true"
+					android:layout_alignParentLeft="true"
+					android:layout_margin="10dip" />
+				
+				<Button 
+					android:id="@+id/btnViewCommunity"
+					android:layout_width="wrap_content"
+				    android:layout_height="45dip"
+				    android:text="Community"
+				    android:layout_marginLeft="5dip"
+				    android:layout_centerVertical="true"		
+					android:layout_toRightOf="@+id/imgDepanUserProfile" />
+		    </RelativeLayout>
+		    
+		    
+			<TextView 
+				android:id="@+id/txtUserCity"
+				android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+				android:textColor="#000000"
+				android:textSize="22sp"
+				android:singleLine="false"
+				android:layout_marginTop="15dip"
+				android:layout_marginBottom="5dip"
+				android:layout_marginLeft="15dip"
+				android:layout_below="@+id/containerUserPhoto" />
+			
+			<View 
+		        android:id="@+id/line1"
+		        android:layout_width="fill_parent"
+		        android:layout_height="1dp"
+		        android:background="#DDDDDC"
+		        android:layout_below="@+id/txtUserCity" />
+			
+			<TextView 
+				android:id="@+id/txtUserExplanation"
+				android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+				android:textColor="#000000"
+				android:textSize="22sp"
+				android:layout_marginTop="5dip"
+				android:layout_marginLeft="15dip"
+				android:layout_marginBottom="5dip"
+				android:layout_below="@+id/line1" />
+			
+			<View 
+		        android:id="@+id/line2"
+		        android:layout_width="fill_parent"
+		        android:layout_height="1dp"
+		        android:background="#DDDDDC"
+		        android:layout_below="@+id/txtUserExplanation" />   
+				
+		</RelativeLayout>
+	</ScrollView>
+
+</LinearLayout>

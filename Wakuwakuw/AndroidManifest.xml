@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.android.wakuwakuw"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    
+    <supports-screens 
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:resizeable="true"
+        android:anyDensity="true" />
+
+    <uses-sdk android:minSdkVersion="8"
+        android:targetSdkVersion="8" />
+    
+    <!--  <uses-feature android:name="android.hardware.camera"></uses-feature> --> 
+    
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.READ_CALENDAR" />
+	<uses-permission android:name="android.permission.WRITE_CALENDAR" />
+	<uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:icon="@drawable/wakuwakuwlogo"
+        android:label="@string/app_name"
+        android:theme="@style/CustomTheme" >
+        
+        <uses-library android:name="com.google.android.maps" />
+        
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity 
+            android:name=".Timeline"
+            android:label="Timeline"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden">
+        </activity>
+        
+        <activity 
+            android:name=".ChangeCity"
+            android:label="Change City"
+            android:theme="@android:style/Theme.Dialog"
+            android:windowSoftInputMode="stateVisible"
+            android:configChanges="orientation|keyboardHidden">
+        </activity>
+        
+        <activity 
+            android:name=".Search"
+            android:label="Search"
+            android:theme="@android:style/Theme.Dialog"
+            android:windowSoftInputMode="stateVisible"
+            android:configChanges="orientation|keyboardHidden">
+        </activity>
+        
+        <activity 
+            android:name=".FormDetail"
+            android:label="Detail"
+            android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+        
+        <activity 
+            android:name=".FormDetailCommun"
+            android:label="Detail Community"
+            android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+        
+        <activity 
+            android:name=".FormSearchResult">
+        </activity>
+        
+        <activity 
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:name=".PetaLokasi">
+        </activity>
+        
+        <activity 
+            android:name=".FormViewAllComment"
+            android:label="All Comment"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+        
+        <activity 
+            android:name=".FormViewOneComment"
+            android:label="Comment"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+        
+        
+        <activity 
+            android:name=".FormCreateNewEvent"
+            android:label="Create New Event"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden">
+        </activity>
+        
+        <activity 
+            android:name=".FormCreateNewMeetup"
+            android:label="Create New Meetup"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden">
+        </activity>
+        
+        <activity 
+            android:name=".FormCreateNewCommunity"
+            android:label="Create New Community"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden">
+        </activity>
+        
+        <activity 
+            android:name=".FormRegisterNewAccount"
+            android:label="Register"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden">
+        </activity>
+        
+        <activity 
+            android:name=".PetaPickFromMap"
+            android:label="Pick From Map"
+            android:theme="@android:style/Theme.Dialog"
+            android:configChanges="orientation|keyboardHidden">
+        </activity>
+        
+        <activity 
+            android:name=".FormPhotoGallery"
+            android:label="Photo Gallery"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden">
+        </activity>
+        
+        <activity 
+            android:name=".FormPhotoDetail"
+            android:label="Photo Detail"
+            android:theme="@android:style/Theme.Dialog"
+            android:configChanges="orientation|keyboardHidden">
+        </activity>
+        
+        <activity 
+            android:name=".PetaNearMeNow"
+            android:label="Near Me"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden">
+        </activity>
+        
+        <activity 
+            android:name=".FormUserInfo"
+            android:label="User Info"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden">
+        </activity>
+        
+        <activity 
+            android:name=".FormEditUserProfile"
+            android:label="Edit Profile"
+            android:theme="@android:style/Theme.Dialog"
+            android:configChanges="orientation|keyboardHidden">
+        </activity>
+        
+        <activity 
+            android:name=".FormEditUserPhoto"
+            android:label="Edit Photo"
+            android:theme="@android:style/Theme.Dialog"
+            android:configChanges="orientation|keyboardHidden">
+        </activity>
+        
+    </application>
+
+</manifest>

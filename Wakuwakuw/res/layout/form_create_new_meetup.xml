@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <ScrollView 
+        android:id="@+id/scrollViewFormCreateNewMeetup"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="#FFFFFF" 
+	    android:padding="5dip">
+        
+        <RelativeLayout 
+            android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:background="#FFFFFF">
+		    
+            <TextView 
+                android:id="@+id/txtOpeningCreateNewMeetup"
+                android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:gravity="center_horizontal"
+		    	android:text="You are about creating a meetup. Let's fill below field(s), all of these informations are mandatory."
+		    	android:textSize="14sp"
+		    	android:textStyle="bold"
+		    	android:textColor="#000000"
+		    	android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dip"/>
+            
+            <TextView 
+                android:id="@+id/txtOpeningMeetupSelectCommunity"
+                android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:gravity="center_horizontal"
+		    	android:text="Select the community"
+		    	android:textSize="12sp"
+		    	android:textColor="#000000"
+		    	android:layout_below="@+id/txtOpeningCreateNewMeetup"
+		    	android:layout_alignParentLeft="true"
+                android:layout_marginBottom="5dip"/>
+            
+            <View 
+		        android:id="@+id/lineMeetupSelectCommunity"
+		        android:layout_width="fill_parent"
+		        android:layout_height="1dp"
+		        android:background="#DDDDDC"
+		        android:layout_below="@+id/txtOpeningMeetupSelectCommunity"
+		        android:layout_marginBottom="10dip" />
+            
+            <Spinner 
+		        android:id="@+id/spnMeetupSelectCommunity"
+				android:layout_width="fill_parent"
+				android:layout_height="40dip"
+				android:layout_below="@+id/lineMeetupSelectCommunity"
+				android:layout_marginBottom="20dip"/>
+            
+            
+            
+            <TextView 
+                android:id="@+id/txtOpeningMeetupDetail"
+                android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:gravity="center_horizontal"
+		    	android:text="Tell us your meetup details."
+		    	android:textSize="12sp"
+		    	android:textColor="#000000"
+		    	android:layout_below="@+id/spnMeetupSelectCommunity"
+		    	android:layout_alignParentLeft="true"
+                android:layout_marginBottom="5dip"/>
+            
+            <View 
+		        android:id="@+id/lineMeetupDetail"
+		        android:layout_width="fill_parent"
+		        android:layout_height="1dp"
+		        android:background="#DDDDDC"
+		        android:layout_below="@+id/txtOpeningMeetupDetail"
+		        android:layout_marginBottom="10dip" />
+            
+            <EditText 
+                android:id="@+id/editMeetupTitle"
+                android:layout_width="fill_parent"
+		        android:layout_height="40dip"
+		        android:singleLine="true"
+		        android:gravity="top"
+                android:hint="Meetup's Title"
+                android:textSize="14sp"
+                android:layout_below="@+id/lineMeetupDetail"
+                android:layout_marginBottom="10dip"/>
+            
+            <EditText 
+                android:id="@+id/editMeetupDescription"
+                android:layout_width="fill_parent"
+		        android:layout_height="180dip"
+		        android:gravity="top"
+                android:hint="Describe Your Meetup"
+                android:textSize="14sp"
+                android:layout_below="@+id/editMeetupTitle"
+                android:layout_marginBottom="30dip"/>
+            
+            
+            <TextView 
+                android:id="@+id/txtOpeningMeetupHeld"
+                android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:gravity="center_horizontal"
+		    	android:text="Tell us when your meetup will be held."
+		    	android:textSize="12sp"
+		    	android:textColor="#000000"
+		    	android:layout_below="@+id/editMeetupDescription"
+		    	android:layout_alignParentLeft="true"
+                android:layout_marginBottom="5dip"/>
+            
+            <View 
+		        android:id="@+id/lineMeetupHeld"
+		        android:layout_width="fill_parent"
+		        android:layout_height="1dp"
+		        android:background="#DDDDDC"
+		        android:layout_below="@+id/txtOpeningMeetupHeld"
+		        android:layout_marginBottom="10dip" />
+            
+            <!--  
+            <DatePicker 
+                android:id="@+id/datePickerMeetupHeld"
+                android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:
+		        android:layout_below="@+id/lineMeetupHeld"
+		        android:layout_centerHorizontal="true"
+		        android:layout_marginBottom="5dip"/>
+            
+            <TimePicker 
+                android:id="@+id/timePickerMeetupHeld"
+                android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/datePickerMeetupHeld"
+		        android:layout_centerHorizontal="true"
+		        android:layout_marginBottom="5dip"/>
+		    -->
+		    
+		    <!-- buat time start -->
+		    <EditText 
+                android:id="@+id/editMeetupDateHeldStart"
+                android:layout_width="100dip"
+		        android:layout_height="40dip"
+		        android:gravity="top|center_horizontal"
+                android:hint="Start from..."
+                android:textSize="14sp"
+                android:editable="false"
+                android:layout_below="@+id/lineMeetupHeld"
+                android:layout_marginBottom="10dip"/>
+            
+		    <ImageView
+				android:id="@+id/imgCalendarMeetupDateHeldStart"
+				android:layout_width="30dip"
+				android:layout_height="30dip"
+				android:src="@drawable/calendar"
+				android:scaleType="fitCenter"
+				android:layout_toRightOf="@+id/editMeetupDateHeldStart"
+				android:layout_below="@+id/lineMeetupHeld"
+				android:layout_marginLeft="2dip" />
+            
+		    <EditText 
+                android:id="@+id/editMeetupTimeHeldStart"
+                android:layout_width="100dip"
+		        android:layout_height="40dip"
+		        android:gravity="top|center_horizontal"
+                android:hint="Start from..."
+                android:textSize="14sp"
+                android:editable="false"
+                android:layout_below="@+id/lineMeetupHeld"
+                android:layout_toLeftOf="@+id/imgTimeMeetupDateHeldStart"
+                android:layout_marginBottom="10dip"/>
+		    
+		    <ImageView
+				android:id="@+id/imgTimeMeetupDateHeldStart"
+				android:layout_width="30dip"
+				android:layout_height="30dip"
+				android:src="@drawable/clock_blue"
+				android:scaleType="fitCenter"
+				android:layout_alignParentRight="true"
+				android:layout_below="@+id/lineMeetupHeld"
+				android:layout_marginLeft="2dip" />
+		    
+		    
+		    <!-- buat time end -->
+		    <RelativeLayout 
+		        android:id="@+id/containerMeetupTimeEnd"
+	            android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:background="#FFFFFF"
+			    android:layout_below="@+id/editMeetupDateHeldStart"
+			    android:visibility="gone">
+			    
+		        <EditText 
+	                android:id="@+id/editMeetupDateHeldEnd"
+	                android:layout_width="100dip"
+			        android:layout_height="40dip"
+			        android:gravity="top|center_horizontal"
+	                android:hint="End at..."
+	                android:textSize="14sp"
+	                android:editable="false"
+	                android:layout_below="@+id/editMeetupDateHeldStart"
+	                android:layout_marginBottom="5dip"/>
+	            
+			    <ImageView
+					android:id="@+id/imgCalendarMeetupDateHeldEnd"
+					android:layout_width="30dip"
+					android:layout_height="30dip"
+					android:src="@drawable/calendar"
+					android:scaleType="fitCenter"
+					android:layout_toRightOf="@+id/editMeetupDateHeldEnd"
+					android:layout_below="@+id/editMeetupDateHeldStart"
+					android:layout_marginLeft="2dip" />
+	            
+			    <EditText 
+	                android:id="@+id/editMeetupTimeHeldEnd"
+	                android:layout_width="100dip"
+			        android:layout_height="40dip"
+			        android:gravity="top|center_horizontal"
+	                android:hint="End at..."
+	                android:textSize="14sp"
+	                android:editable="false"
+	                android:layout_below="@+id/editMeetupDateHeldStart"
+	                android:layout_toLeftOf="@+id/imgTimeMeetupDateHeldEnd"
+	                android:layout_marginBottom="5dip"/>
+			    
+			    <ImageView
+					android:id="@+id/imgTimeMeetupDateHeldEnd"
+					android:layout_width="30dip"
+					android:layout_height="30dip"
+					android:src="@drawable/clock_blue"
+					android:scaleType="fitCenter"
+					android:layout_alignParentRight="true"
+					android:layout_below="@+id/editMeetupDateHeldStart"
+					android:layout_marginLeft="2dip" />
+		        
+		    </RelativeLayout>
+		    
+		    
+		    <CheckBox 
+		        android:id="@+id/chkMeetupSpecifyEndTime"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Specify End Time."
+				android:textColor="#000000"
+				android:textSize="14sp"
+				android:layout_below="@+id/containerMeetupTimeEnd"
+				android:layout_marginBottom="10dip"/>
+		    
+		    
+		    <Spinner 
+		        android:id="@+id/spnRoutineMeetupType"
+				android:layout_width="fill_parent"
+				android:layout_height="40dip"
+				android:entries="@array/pilihanRoutineMeetup"
+				android:layout_below="@+id/chkMeetupSpecifyEndTime"
+				android:layout_marginBottom="5dip"
+				android:visibility="gone"/>
+		    
+		    <CheckBox 
+		        android:id="@+id/chkMakeAsRoutineMeetup"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Make this as routine meetup."
+				android:textColor="#000000"
+				android:textSize="14sp"
+				android:layout_below="@+id/spnRoutineMeetupType"
+				android:layout_marginBottom="30dip"/>
+		    
+		    
+		    
+		    <TextView 
+                android:id="@+id/txtOpeningMeetupPlace"
+                android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:gravity="center_horizontal"
+		    	android:text="Tell us where your meetup will be held."
+		    	android:textSize="12sp"
+		    	android:textColor="#000000"
+		    	android:layout_below="@+id/chkMakeAsRoutineMeetup"
+		    	android:layout_alignParentLeft="true"
+                android:layout_marginBottom="5dip"/>
+            
+            <View 
+		        android:id="@+id/lineMeetupPlace"
+		        android:layout_width="fill_parent"
+		        android:layout_height="1dp"
+		        android:background="#DDDDDC"
+		        android:layout_below="@+id/txtOpeningMeetupPlace"
+		        android:layout_marginBottom="10dip" />
+            
+            <AutoCompleteTextView 
+	            android:id="@+id/autoCompleteMeetupPlaceCity"
+	            android:layout_width="fill_parent"
+	            android:layout_height="40dip"
+	            android:completionThreshold="3"
+	            android:singleLine="true"
+	            android:hint="The city..."
+	            android:textSize="14sp"
+	            android:layout_below="@+id/lineMeetupPlace"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginBottom="5dip"/>
+		    
+            <!--  
+            <AutoCompleteTextView 
+	            android:id="@+id/autoCompleteMeetupPlaceDetail"
+	            android:layout_width="fill_parent"
+	            android:layout_height="40dip"
+	            android:completionThreshold="3"
+	            android:singleLine="true"
+	            android:hint="Type a location, e.g. J.W. Marriot Hotel"
+	            android:textSize="14sp"
+	            android:layout_below="@+id/editMeetupPlaceCity"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginBottom="5dip"/>
+            -->
+            
+            
+            <!-- ini bagian pick from map -->
+            <RelativeLayout 
+		        android:id="@+id/containerMeetupPickFromMap"
+	            android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:background="#FFFFFF"
+			    android:layout_below="@+id/autoCompleteMeetupPlaceCity"
+			    android:layout_marginBottom="30dip"
+			    android:visibility="visible">
+			    
+                <LinearLayout 
+			        android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:orientation="vertical">
+			        
+                    <!--  
+			        <LinearLayout
+					    android:layout_width="fill_parent"
+					    android:layout_height="wrap_content"
+					    android:orientation="horizontal"
+					    android:layout_marginBottom="2dip">
+					    
+			            <EditText
+						    android:id="@+id/editMeetupPickFromMapLatitude"
+							android:layout_width="0dip"
+							android:layout_height="40dip"
+							android:layout_weight="1"
+							android:textSize="14sp"
+							android:singleLine="true"
+							android:editable="false"
+							android:hint="Latitude"
+							android:layout_marginRight="3dip" />
+			            
+			            <EditText
+						    android:id="@+id/editMeetupPickFromMapLongitude"
+							android:layout_width="0dip"
+							android:layout_height="40dip"
+							android:layout_weight="1"
+							android:textSize="14sp"
+							android:singleLine="true"
+							android:editable="false"
+							android:hint="Longitude" />
+			            
+					</LinearLayout>
+					-->
+					
+			        <LinearLayout
+					    android:layout_width="fill_parent"
+					    android:layout_height="wrap_content"
+					    android:orientation="horizontal">
+			            
+			            <AutoCompleteTextView 
+				            android:id="@+id/autoCompleteMeetupPlaceDetail"
+				            android:layout_width="0dip"
+				            android:layout_height="40dip"
+				            android:layout_weight="1"
+				            android:completionThreshold="3"
+				            android:singleLine="true"
+				            android:hint="Type a location, e.g. J.W. Marriot Hotel"
+				            android:textSize="14sp"
+				            android:layout_marginRight="5dip"/>
+			            
+			            <ImageView
+						    android:id="@+id/imgViewMeetupPickFromMap"
+							android:layout_width="wrap_content"
+							android:layout_height="35dip"
+							android:src="@drawable/earth_location" />
+			            
+			        </LinearLayout>
+				</LinearLayout>
+			</RelativeLayout>
+            
+            
+            <RelativeLayout 
+                android:id="@+id/containerPickImageMeetup"
+	            android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:background="#FFFFFF"
+			    android:layout_below="@+id/containerMeetupPickFromMap"
+			    android:layout_marginBottom="30dip">
+            
+	            <ImageView 
+	                android:id="@+id/imgViewPickFromSDCardMeetup"
+	                android:layout_width="90dip"
+			        android:layout_height="90dip"
+			        android:src="@drawable/facebook_logo"
+			        android:layout_marginBottom="30dip"
+			        android:layout_marginRight="10dip"
+			        android:layout_below="@+id/containerMeetupPickFromMap" />
+	            
+	            <Button 
+			        android:id="@+id/buttonPickImageMeetup"
+			        android:layout_width="wrap_content"
+			        android:layout_height="40dip"
+			        android:text="Choose Image"
+			        android:textSize="14sp"
+			        android:layout_marginBottom="30dip"
+			        android:layout_centerVertical="true"
+			        android:layout_toRightOf="@+id/imgViewPickFromSDCardMeetup"
+			        android:layout_below="@+id/containerMeetupPickFromMap" />
+            
+            </RelativeLayout>
+            
+            
+            <Button 
+		        android:id="@+id/buttonNextCreateNewMeetup"
+		        android:layout_width="wrap_content"
+		        android:layout_height="40dip"
+		        android:text="Next"
+		        android:textSize="14sp"
+		        android:textStyle="bold"
+		        android:textColor="#FFFFFF"
+		        android:layout_below="@+id/containerPickImageMeetup" />
+            
+		</RelativeLayout>
+        
+    </ScrollView>
+
+</LinearLayout>

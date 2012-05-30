@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/containerChangeCity"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="5dip" >
+    <TextView 
+        android:id="@+id/txtViewCityChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change City"
+        android:textSize="22sp"
+        android:layout_margin="5dip"
+        android:layout_centerHorizontal="true" />
+    
+    <AutoCompleteTextView 
+	    android:id="@+id/autoCompleteChangeCity"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:completionThreshold="3"
+	    android:singleLine="true"
+	    android:hint="Type your city here..."
+	    android:layout_below="@+id/txtViewCityChange"
+	    android:layout_alignParentLeft="true"
+	    android:layout_marginTop="5dip" />
+    
+    <!--  
+    <EditText 
+        android:id="@+id/editChangeCity"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type Your City Here..."
+        android:maxLines="1" 
+        android:singleLine="true"
+        android:scrollHorizontally="true"
+        android:layout_marginTop="5dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtViewCityChange" />
+    -->
+    
+    <RelativeLayout 
+        android:id="@+id/relative1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/autoCompleteChangeCity"
+	    android:layout_centerHorizontal="true">
+        
+        <Button 
+	        android:id="@+id/btnChangeCity"
+	        android:layout_width="80dip"
+	        android:layout_height="wrap_content"
+	        android:text="Change"
+	        android:layout_marginTop="10dip" />
+	    <Button 
+	        android:id="@+id/btnClose"
+	        android:layout_width="80dip"
+	        android:layout_height="wrap_content"
+	        android:text="Close"
+	        android:layout_marginTop="10dip"
+	        android:layout_marginLeft="10dip"
+	        android:layout_toRightOf="@+id/btnChangeCity" />
+    </RelativeLayout>
+
+</RelativeLayout>

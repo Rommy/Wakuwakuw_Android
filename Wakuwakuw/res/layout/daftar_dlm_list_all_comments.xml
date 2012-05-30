@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/listview_selector_color"
+	android:padding="5dip">
+
+    <ImageView
+    	android:layout_width="40dip"
+    	android:layout_height="40dip"
+    	android:id="@+id/imgViewLogoUser"
+    	android:src="@drawable/icon"
+    	android:layout_alignParentLeft="true"
+    	android:layout_centerInParent="true"
+    	android:layout_marginRight="5dip">
+    </ImageView>
+
+    <TextView
+    	android:layout_height="wrap_content"
+    	android:text="TextView"
+    	android:textSize="14sp"
+    	android:textStyle="bold"
+    	android:textColor="#000000"
+    	android:layout_width="wrap_content"
+    	android:id="@+id/txtViewNamaUser"
+    	android:layout_toRightOf="@+id/imgViewLogoUser"
+    	android:layout_marginLeft="2dip">
+    </TextView>
+    
+    <TextView
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="TextView"
+    	android:textSize="12sp"
+    	android:textColor="#000000"
+    	android:id="@+id/txtViewIsiComment"
+    	android:layout_toRightOf="@+id/imgViewLogoUser"
+    	android:layout_below="@+id/txtViewNamaUser"
+    	android:layout_margin="2dip">
+    </TextView>
+
+    <TextView
+    	android:layout_height="wrap_content"
+    	android:text="TextView"
+    	android:textSize="10sp"
+    	android:textColor="#000000"
+    	android:layout_width="wrap_content"
+    	android:id="@+id/txtViewTanggalComment"
+    	android:layout_toRightOf="@+id/imgViewLogoUser"
+    	android:layout_below="@+id/txtViewIsiComment"
+    	android:layout_marginLeft="2dip">
+    </TextView>
+    
+    <TextView
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="id"
+    	android:textColor="#000000"
+    	android:textSize="8sp"
+    	android:id="@+id/txtViewIdComment"
+    	android:layout_toRightOf="@+id/imgViewLogoUser"
+    	android:layout_below="@+id/txtViewIsiComment"
+    	android:layout_margin="2dip"
+    	android:visibility="gone">
+    </TextView>
+    
+    <ImageView
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:src="@drawable/comments_icon"
+    	android:id="@+id/imgViewCommentInParent"
+    	android:layout_toRightOf="@+id/imgViewLogoUser"
+    	android:layout_below="@+id/txtViewTanggalComment"
+    	android:layout_margin="3dip">
+    </ImageView>
+    
+    <TextView
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="5 Comments"
+    	android:textColor="#000000"
+    	android:textSize="10sp"
+    	android:id="@+id/txtViewJumlahCommentInParent"
+    	android:layout_toRightOf="@+id/imgViewCommentInParent"
+    	android:layout_below="@+id/txtViewTanggalComment"
+    	android:layout_margin="3dip">
+    </TextView>
+
+</RelativeLayout>

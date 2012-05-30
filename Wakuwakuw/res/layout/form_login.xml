@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="3dip"
+    android:orientation="vertical" >
+    
+    <!--  
+    <TextView 
+        android:id="@+id/txtUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textSize="14sp" />
+    -->
+    
+    <TextView 
+        android:id="@+id/txtComeIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Come In..."
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dip" />
+    
+    <EditText 
+        android:id="@+id/editTextUsername"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:hint="Username..."
+        android:layout_below="@+id/txtComeIn"
+        android:layout_marginBottom="10dip" />
+    
+    <!--  
+    <TextView 
+        android:id="@+id/txtPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password "
+        android:textSize="14sp"
+        android:layout_below="@+id/editTextUsername" />
+    -->
+    
+    <EditText 
+        android:id="@+id/editTextPassword"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:hint="Password..."
+        android:inputType="textPassword"
+        android:layout_below="@+id/editTextUsername"
+        android:layout_marginBottom="15dip" />
+    
+    <Button 
+        android:id="@+id/buttonSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dip"
+        android:text="Sign In"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_below="@+id/editTextPassword" />
+    
+    <TextView 
+        android:id="@+id/txtRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Join Now"
+        android:textSize="20sp"
+        android:textColor="#96D528"
+        android:textStyle="bold"
+        android:layout_marginLeft="30dip"
+        android:layout_toRightOf="@+id/buttonSignIn"
+        android:layout_below="@+id/editTextPassword" />
+
+    
+</RelativeLayout>

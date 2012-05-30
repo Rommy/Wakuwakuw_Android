@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <ScrollView 
+        android:id="@+id/scrollViewFormCreateNewCommunity"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="#FFFFFF"
+	    android:padding="5dip">
+	    
+        <RelativeLayout 
+            android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:background="#FFFFFF">
+			
+            <TextView 
+                android:id="@+id/txtOpeningCreateNewCommunity"
+                android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:gravity="center_horizontal"
+		    	android:text="You are about creating a community. Let's fill below field(s), all of these informations are mandatory."
+		    	android:textSize="14sp"
+		    	android:textStyle="bold"
+		    	android:textColor="#000000"
+		    	android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dip"/>
+            
+            <TextView 
+                android:id="@+id/txtOpeningCommunityDetail"
+                android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:gravity="center_horizontal"
+		    	android:text="Tell us your community details."
+		    	android:textSize="12sp"
+		    	android:textColor="#000000"
+		    	android:layout_below="@+id/txtOpeningCreateNewCommunity"
+		    	android:layout_alignParentLeft="true"
+                android:layout_marginBottom="5dip"/>
+            
+            <View 
+		        android:id="@+id/lineCommunityDetail"
+		        android:layout_width="fill_parent"
+		        android:layout_height="1dp"
+		        android:background="#DDDDDC"
+		        android:layout_below="@+id/txtOpeningCommunityDetail"
+		        android:layout_marginBottom="10dip" />
+            
+            <EditText 
+                android:id="@+id/editCommunityName"
+                android:layout_width="fill_parent"
+		        android:layout_height="40dip"
+		        android:singleLine="true"
+		        android:gravity="top"
+                android:hint="Community's Name"
+                android:textSize="14sp"
+                android:layout_below="@+id/lineCommunityDetail"
+                android:layout_marginBottom="10dip"/>
+            
+            <EditText 
+                android:id="@+id/editCommunityContactPerson"
+                android:layout_width="fill_parent"
+		        android:layout_height="40dip"
+		        android:singleLine="true"
+		        android:gravity="top"
+                android:hint="Community's Contact Person"
+                android:textSize="14sp"
+                android:layout_below="@+id/editCommunityName"
+                android:layout_marginBottom="10dip"/>
+            
+            <EditText 
+                android:id="@+id/editCommunityEmail"
+                android:layout_width="fill_parent"
+		        android:layout_height="40dip"
+		        android:singleLine="true"
+		        android:gravity="top"
+                android:hint="Community's Email"
+                android:textSize="14sp"
+                android:layout_below="@+id/editCommunityContactPerson"
+                android:layout_marginBottom="10dip"/>
+            
+            <EditText 
+                android:id="@+id/editCommunityWebsite"
+                android:layout_width="fill_parent"
+		        android:layout_height="40dip"
+		        android:singleLine="true"
+		        android:gravity="top"
+                android:hint="Community's Website"
+                android:textSize="14sp"
+                android:layout_below="@+id/editCommunityEmail"
+                android:layout_marginBottom="10dip"/>
+            
+            <EditText 
+                android:id="@+id/editCommunityAddress"
+                android:layout_width="fill_parent"
+		        android:layout_height="40dip"
+		        android:singleLine="true"
+		        android:gravity="top"
+                android:hint="Community's Address"
+                android:textSize="14sp"
+                android:layout_below="@+id/editCommunityWebsite"
+                android:layout_marginBottom="10dip"/>
+            
+            <EditText 
+                android:id="@+id/editCommunityPhone"
+                android:layout_width="fill_parent"
+		        android:layout_height="40dip"
+		        android:singleLine="true"
+		        android:gravity="top"
+                android:hint="Community's Phone"
+                android:textSize="14sp"
+                android:layout_below="@+id/editCommunityAddress"
+                android:layout_marginBottom="10dip"/>
+            
+            
+            <RelativeLayout 
+                android:id="@+id/containerTxtOpeningCommunityURL"
+	            android:layout_width="wrap_content"
+			    android:layout_height="40dip"
+			    android:background="#FFFFFF"
+			    android:layout_below="@+id/editCommunityPhone"
+			    android:layout_marginRight="5dip"
+			    android:layout_marginBottom="10dip">
+			    
+                <TextView 
+	                android:id="@+id/txtOpeningCommunityURL"
+	                android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:text="http://wakuwakuw.com/"
+			    	android:textSize="12sp"
+			    	android:textColor="#000000"
+			    	android:layout_below="@+id/editCommunityPhone"
+			    	android:layout_centerInParent="true"/>
+                
+			</RelativeLayout>
+            
+            
+            <EditText 
+                android:id="@+id/editCommunityURL"
+                android:layout_width="fill_parent"
+		        android:layout_height="40dip"
+		        android:singleLine="true"
+		        android:gravity="top"
+                android:hint="Community's URL"
+                android:textSize="14sp"
+                android:layout_toRightOf="@+id/containerTxtOpeningCommunityURL"
+                android:layout_below="@+id/editCommunityPhone"
+                android:layout_marginBottom="10dip"/>
+            
+            <EditText 
+                android:id="@+id/editCommunityDescription"
+                android:layout_width="fill_parent"
+		        android:layout_height="180dip"
+		        android:gravity="top"
+                android:hint="Describe Your Community"
+                android:textSize="14sp"
+                android:layout_below="@+id/editCommunityURL"
+                android:layout_marginBottom="30dip"/>
+            
+            
+            
+            <TextView 
+                android:id="@+id/txtOpeningCommunityPlace"
+                android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:gravity="center_horizontal"
+		    	android:text="Tell us where your community."
+		    	android:textSize="12sp"
+		    	android:textColor="#000000"
+		    	android:layout_below="@+id/editCommunityDescription"
+		    	android:layout_alignParentLeft="true"
+                android:layout_marginBottom="5dip"/>
+            
+            <View 
+		        android:id="@+id/lineCommunityPlace"
+		        android:layout_width="fill_parent"
+		        android:layout_height="1dp"
+		        android:background="#DDDDDC"
+		        android:layout_below="@+id/txtOpeningCommunityPlace"
+		        android:layout_marginBottom="10dip" />
+            
+            <EditText 
+	            android:id="@+id/editCommunityPlaceCity"
+	            android:layout_width="fill_parent"
+	            android:layout_height="40dip"
+	            android:singleLine="true"
+	            android:hint="The city..."
+	            android:textSize="14sp"
+	            android:layout_below="@+id/lineCommunityPlace"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginBottom="30dip"/>
+            
+            
+            
+            <TextView 
+                android:id="@+id/txtOpeningCommunityCategory"
+                android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:text="Tell us what community's category is right for this community."
+		    	android:textSize="12sp"
+		    	android:textColor="#000000"
+		    	android:layout_below="@+id/editCommunityPlaceCity"
+		    	android:layout_alignParentLeft="true"
+                android:layout_marginBottom="5dip"/>
+            
+            <View 
+		        android:id="@+id/lineCommunityCategory"
+		        android:layout_width="fill_parent"
+		        android:layout_height="1dp"
+		        android:background="#DDDDDC"
+		        android:layout_below="@+id/txtOpeningCommunityCategory"
+		        android:layout_marginBottom="10dip" />
+            
+            <Spinner 
+		        android:id="@+id/spnCommunityCategory"
+				android:layout_width="fill_parent"
+				android:layout_height="40dip"
+				android:entries="@array/pilihanCommunityCategory"
+				android:layout_below="@+id/lineCommunityCategory"
+				android:layout_marginBottom="30dip"/>
+            
+            
+            <RelativeLayout 
+                android:id="@+id/containerPickImageCommunity"
+	            android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:background="#FFFFFF"
+			    android:layout_below="@+id/spnCommunityCategory"
+			    android:layout_marginBottom="30dip">
+            
+	            <ImageView 
+	                android:id="@+id/imgViewPickFromSDCardCommunity"
+	                android:layout_width="90dip"
+			        android:layout_height="90dip"
+			        android:src="@drawable/facebook_logo"
+			        android:layout_marginBottom="30dip"
+			        android:layout_marginRight="10dip"
+			        android:layout_below="@+id/spnCommunityCategory" />
+	            
+	            <Button 
+			        android:id="@+id/buttonPickImageCommunity"
+			        android:layout_width="wrap_content"
+			        android:layout_height="40dip"
+			        android:text="Choose Image"
+			        android:textSize="14sp"
+			        android:layout_marginBottom="30dip"
+			        android:layout_centerVertical="true"
+			        android:layout_toRightOf="@+id/imgViewPickFromSDCardCommunity"
+			        android:layout_below="@+id/spnCommunityCategory" />
+            
+            </RelativeLayout>
+		    
+            
+            
+            <Button 
+		        android:id="@+id/buttonNextCreateNewCommunity"
+		        android:layout_width="wrap_content"
+		        android:layout_height="40dip"
+		        android:text="Next"
+		        android:textSize="14sp"
+		        android:textStyle="bold"
+		        android:textColor="#FFFFFF"
+		        android:layout_below="@+id/containerPickImageCommunity" />
+		    
+		</RelativeLayout>
+	</ScrollView>
+
+</LinearLayout>

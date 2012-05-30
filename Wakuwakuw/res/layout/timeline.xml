@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <!-- Tampilan ActionBar cadangan -->
+	<!--
+	<com.thira.examples.actionbar.widget.ActionBar 
+	    android:id="@+id/actionBar" 
+        android:layout_width="fill_parent"
+        android:layout_height="45dip" 
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+	-->
+    
+    <RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+		
+	    <RelativeLayout
+			android:id="@+id/relativeLayoutHeader"
+			android:layout_width="fill_parent"
+			android:layout_height="45dip"
+			android:background="#DDDDDC">
+			  		
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="45dip"
+				android:id="@+id/imgViewMainLogo"
+				android:src="@drawable/wakuwakuw"
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true"
+				android:scaleType="fitCenter"
+				android:paddingLeft="5dip">
+			</ImageView>
+			
+			
+			<ProgressBar
+			    style="@android:style/Widget.ProgressBar.Large.Inverse"
+			    android:id="@+id/progressBarTimeline" 
+			    android:layout_width="30dip"
+			    android:layout_height="30dip"
+			    android:layout_centerVertical="true"
+			    android:layout_toLeftOf="@+id/imgViewSeparator3"
+			    android:padding="5dip"
+			    android:indeterminateOnly="true"
+			    android:visibility="gone"/>
+			
+			<ImageView 
+			    android:layout_width="wrap_content"
+				android:layout_height="45dip"
+				android:id="@+id/imgViewSeparator3"
+				android:src="@drawable/actionbar_separator"
+				android:layout_centerVertical="true"
+				android:layout_toLeftOf="@+id/imgButtonToolBox"
+				android:scaleType="fitCenter"
+				android:visibility="gone" />
+			
+			<ImageButton
+				android:id="@+id/imgButtonToolBox" android:layout_width="40dip"
+				android:scaleType="fitCenter" android:layout_height="45dip"
+				android:background="@drawable/actionbar_btn" android:padding="5dip"
+				android:layout_centerVertical="true"
+				android:singleLine="true" android:visibility="gone"
+				android:layout_centerInParent="true"
+				android:layout_toLeftOf="@+id/imgViewSeparator2"
+				android:src="@drawable/user" />
+			
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="45dip"
+				android:id="@+id/imgViewSeparator2"
+				android:src="@drawable/actionbar_separator"
+				android:layout_centerVertical="true"
+				android:layout_toLeftOf="@+id/imgButtonChangeCategory"
+				android:scaleType="fitCenter"
+				android:visibility="gone">
+			</ImageView>
+			
+			<ImageButton
+				android:id="@+id/imgButtonChangeCategory" android:layout_width="40dip"
+				android:scaleType="fitCenter" android:layout_height="45dip"
+				android:background="@drawable/actionbar_btn" android:padding="5dip"
+				android:layout_centerVertical="true"
+				android:singleLine="true" android:visibility="gone"
+				android:layout_centerInParent="true"
+				android:layout_toLeftOf="@+id/imgViewSeparator"
+				android:src="@drawable/event" />
+			
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="45dip"
+				android:id="@+id/imgViewSeparator"
+				android:src="@drawable/actionbar_separator"
+				android:layout_centerVertical="true"
+				android:layout_toLeftOf="@+id/imgButtonLogIn"
+				android:scaleType="fitCenter">
+			</ImageView>
+			
+			<ImageButton
+				android:id="@+id/imgButtonLogIn" android:layout_width="40dip"
+				android:scaleType="fitCenter" android:layout_height="45dip"
+				android:background="@drawable/actionbar_btn" 
+				android:layout_centerVertical="true"
+				android:singleLine="true" android:visibility="visible"
+				android:padding="5dip"
+				android:layout_alignParentRight="true"
+				android:src="@drawable/key" />
+		</RelativeLayout>
+		
+	    <View
+	        android:id="@+id/lineSep"
+		    android:layout_width="fill_parent"
+		    android:layout_height="1px"
+		    android:background="#000000"
+		    android:layout_below="@+id/relativeLayoutHeader" />
+	    
+	    <RelativeLayout 
+	        android:id="@+id/relativeLayoutHeader2"
+			android:layout_width="fill_parent"
+			android:layout_height="45dip"
+			android:background="#DDDDDC"
+			android:layout_below="@+id/lineSep">
+			
+	        <TextView
+				android:id="@+id/txtViewCityTimeline"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Please Set Your City."
+				android:textSize="14sp"
+				android:textColor="#000000"
+				android:paddingLeft="5dip"
+				android:layout_centerInParent="true"
+				android:layout_alignParentLeft="true"
+				android:layout_below="@+id/lineSep"
+				android:singleLine="true" 
+				android:lines="1"
+				android:visibility="visible" >
+			</TextView>
+			
+			
+	        <ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="45dip"
+				android:id="@+id/imgViewSeparatorUnder2"
+				android:src="@drawable/actionbar_separator"
+				android:layout_centerVertical="true"
+				android:layout_toLeftOf="@+id/imgButtonSearch"
+				android:layout_below="@+id/lineSep"
+				android:scaleType="fitCenter"
+				android:visibility="gone">
+			</ImageView>
+			
+			<ImageButton
+				android:id="@+id/imgButtonSearch" android:layout_width="40dip"
+				android:scaleType="fitCenter" android:layout_height="45dip"
+				android:background="@drawable/actionbar_btn" 
+				android:layout_centerVertical="true"
+				android:singleLine="true" android:visibility="gone"
+				android:padding="5dip"
+				android:layout_toLeftOf="@+id/imgViewSeparatorUnder"
+				android:layout_below="@+id/lineSep"
+				android:src="@drawable/search_black" />
+		
+	        <ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="45dip"
+				android:id="@+id/imgViewSeparatorUnder"
+				android:src="@drawable/actionbar_separator"
+				android:layout_toLeftOf="@+id/imgButtonChangeCity"
+				android:layout_below="@+id/lineSep"
+				android:layout_centerVertical="true"
+				android:scaleType="fitCenter">
+			</ImageView>
+			
+			<ImageButton
+				android:id="@+id/imgButtonChangeCity" android:layout_width="40dip"
+				android:scaleType="fitCenter" android:layout_height="45dip"
+				android:background="@drawable/actionbar_btn" 
+				android:singleLine="true" android:visibility="visible"
+				android:padding="5dip"
+				android:layout_centerVertical="true"
+				android:layout_alignParentRight="true"
+				android:layout_below="@+id/lineSep"
+				android:src="@drawable/location" />
+	    </RelativeLayout>
+	</RelativeLayout>
+	
+    <ListView 
+       	android:id="@+id/listViewCategory"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:background="#EBEBEB"
+		android:cacheColorHint="#00000000"
+		android:headerDividersEnabled="false"
+		android:footerDividersEnabled="false"
+		android:divider="#CBD0CC"
+		android:dividerHeight="1px" >  
+    </ListView>
+
+</LinearLayout>

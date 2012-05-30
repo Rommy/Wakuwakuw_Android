@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+   <item
+  		android:id="@+id/jumpToTop"
+  		android:title="Jump To Top"
+  		android:icon="@drawable/home_black" />
+   
+   <item 
+   		android:id="@+id/refreshTimeline"
+  		android:title="Refresh"
+  		android:icon="@drawable/reload_black" />
+   
+   <item 
+   		android:id="@+id/viewNearMeNow"
+  		android:title="Near Me"
+  		android:icon="@drawable/map_near_me" />
+</menu>

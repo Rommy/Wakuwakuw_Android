@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <ScrollView 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="#FFFFFF"
+	    android:padding="5dip">
+	    
+        <RelativeLayout
+            android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:background="#FFFFFF">
+		    
+            <TextView 
+                android:id="@+id/txtHeaderEditPhoto"
+                android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:gravity="center_horizontal"
+		    	android:text="Upload Profile Picture"
+		    	android:textSize="20sp"
+		    	android:textColor="#000000"
+		    	android:textStyle="bold"
+		    	android:layout_alignParentLeft="true"
+                android:layout_marginBottom="5dip"/>
+            
+            <View 
+		        android:id="@+id/lineEditPhoto"
+		        android:layout_width="fill_parent"
+		        android:layout_height="1dp"
+		        android:background="#DDDDDC"
+		        android:layout_below="@+id/txtHeaderEditPhoto"
+		        android:layout_marginBottom="15dip" />
+            
+            <ImageView 
+	            android:id="@+id/imgViewUserPhoto"
+	            android:layout_width="120dip"
+			    android:layout_height="120dip"
+			    android:src="@drawable/facebook_logo"
+			    android:layout_marginBottom="10dip"
+			    android:layout_centerHorizontal="true"
+			    android:layout_below="@+id/lineEditPhoto" />
+            
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+	            android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_centerHorizontal="true"
+			    android:layout_marginBottom="20dip"
+			    android:layout_below="@+id/imgViewUserPhoto">
+			    
+			    <Button 
+			        android:id="@+id/buttonUploadPhoto"
+			        android:layout_width="wrap_content"
+			        android:layout_height="40dip"
+			        android:text="Upload A Photo"
+			        android:textSize="14sp"
+			        android:textStyle="bold"
+			        android:layout_marginTop="15dip" />
+                
+		    </RelativeLayout>
+		    
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+	            android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_centerHorizontal="true"
+			    android:layout_below="@+id/relativeLayout1">
+			    
+			    <Button 
+			        android:id="@+id/buttonConfirmUpload"
+			        android:layout_width="120dip"
+			        android:layout_height="40dip"
+			        android:text="Start Upload"
+			        android:textSize="14sp" />
+			    
+			    <Button 
+			        android:id="@+id/buttonCancelUpload"
+			        android:layout_width="120dip"
+			        android:layout_height="40dip"
+			        android:text="Close"
+			        android:textSize="14sp"
+			        android:layout_marginLeft="15dip"
+			        android:layout_toRightOf="@+id/buttonConfirmUpload" />
+                
+		    </RelativeLayout>
+            
+		    
+		</RelativeLayout>
+		
+	</ScrollView>
+
+</LinearLayout>

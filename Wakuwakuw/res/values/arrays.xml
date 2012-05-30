@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<array name="pilihan">
+		<item>Lihat Foto</item>
+		<item>Lihat Peta</item>
+	</array>
+	
+	<array name="pilihanCari">
+		<item>Event / Acara</item>
+		<item>Meetup / Pertemuan</item>
+		<item>Community / Komunitas</item>
+	</array>
+	
+	<array name="pilihanRoutineMeetup">
+	    <item>Weekly Meetup</item>
+	    <item>Monthly Meetup</item>
+	    <item>Yearly Meetup</item>
+	</array>
+	
+	<array name="pilihanEventCategory">
+	    <item>Concert</item>
+	    <item>Religion</item>
+	    <item>Seminar</item>
+	    <item>Sport</item>
+	    <item>Exhibition</item>
+	    <item>Travel</item>
+	    <item>Fun</item>
+	    <item>Promo</item>
+	    <item>Charity</item>
+	    <item>Education</item>
+	    <item>Contest</item>
+	    <item>Business Event</item>
+	    <item>General Event</item>
+	</array>
+	
+	<array name="pilihanCommunityCategory">
+	    <item>Business and Finance</item>
+	    <item>Computer and Internet</item>
+	    <item>Culture</item>
+	    <item>Entertainment</item>
+	    <item>Nightlife</item>
+	    <item>Art</item>
+	    <item>Humanity</item>
+	    <item>Family</item>
+	    <item>Youth and Teenager</item>
+	    <item>Ladies</item>
+	    <item>Games</item>
+	    <item>Government and Politic</item>
+	    <item>Health and Wellness</item>
+	    <item>Hobbies and Crafts</item>
+	    <item>Music</item>
+	    <item>Traveling</item>
+	    <item>Automotive</item>
+	    <item>Sport</item>
+	    <item>Regional</item>
+	    <item>Religion and Belief</item>
+	    <item>Romance and Relationship</item>
+	    <item>School and Education</item>
+	    <item>Science</item>
+	    <item>News</item>
+	    <item>Other</item>
+	</array>
+	
+	<array name="pilihanCreateNew">
+		<item>Event</item>
+		<item>Meetup</item>
+		<item>Community</item>
+	</array>
+</resources>

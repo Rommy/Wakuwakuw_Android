@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <ScrollView 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="#FFFFFF"
+	    android:padding="5dip">
+	    
+        <RelativeLayout
+            android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:background="#FFFFFF">
+		    
+            <TextView 
+                android:id="@+id/txtOpeningEditEvent"
+                android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:gravity="center_horizontal"
+		    	android:text="Edit Event ()"
+		    	android:textSize="20sp"
+		    	android:textColor="#000000"
+		    	android:layout_alignParentLeft="true"
+                android:layout_marginBottom="5dip"/>
+            
+            <View 
+		        android:id="@+id/lineEditEvent"
+		        android:layout_width="fill_parent"
+		        android:layout_height="1dp"
+		        android:background="#DDDDDC"
+		        android:layout_below="@+id/txtOpeningEditEvent"
+		        android:layout_marginBottom="25dip" />
+            
+            <EditText 
+                android:id="@+id/editEventTitleEdit"
+                android:layout_width="fill_parent"
+		        android:layout_height="40dip"
+		        android:singleLine="true"
+		        android:gravity="top"
+                android:hint="Event's Title"
+                android:textSize="14sp"
+                android:layout_below="@+id/lineEditEvent"
+                android:layout_marginBottom="10dip"/>
+            
+            <EditText 
+                android:id="@+id/editEventDescriptionEdit"
+                android:layout_width="fill_parent"
+		        android:layout_height="180dip"
+		        android:gravity="top"
+                android:hint="Describe Your Event"
+                android:textSize="14sp"
+                android:layout_below="@+id/editEventTitleEdit"
+                android:layout_marginBottom="20dip"/>
+            
+            
+            
+            <!-- buat time start -->
+		    <EditText 
+                android:id="@+id/editEventDateHeldStartEdit"
+                android:layout_width="100dip"
+		        android:layout_height="40dip"
+		        android:gravity="top|center_horizontal"
+                android:hint="Start from..."
+                android:textSize="14sp"
+                android:editable="false"
+                android:layout_below="@+id/editEventDescriptionEdit"
+                android:layout_marginBottom="10dip"/>
+            
+		    <ImageView
+				android:id="@+id/imgCalendarEventDateHeldStartEdit"
+				android:layout_width="30dip"
+				android:layout_height="30dip"
+				android:src="@drawable/calendar"
+				android:scaleType="fitCenter"
+				android:layout_toRightOf="@+id/editEventDateHeldStartEdit"
+				android:layout_below="@+id/editEventDescriptionEdit"
+				android:layout_marginLeft="2dip" />
+            
+		    <EditText 
+                android:id="@+id/editEventTimeHeldStartEdit"
+                android:layout_width="100dip"
+		        android:layout_height="40dip"
+		        android:gravity="top|center_horizontal"
+                android:hint="Start from..."
+                android:textSize="14sp"
+                android:editable="false"
+                android:layout_below="@+id/editEventDescriptionEdit"
+                android:layout_toLeftOf="@+id/imgTimeEventDateHeldStartEdit"
+                android:layout_marginBottom="10dip"/>
+		    
+		    <ImageView
+				android:id="@+id/imgTimeEventDateHeldStartEdit"
+				android:layout_width="30dip"
+				android:layout_height="30dip"
+				android:src="@drawable/clock_blue"
+				android:scaleType="fitCenter"
+				android:layout_alignParentRight="true"
+				android:layout_below="@+id/editEventDescriptionEdit"
+				android:layout_marginLeft="2dip" />
+		    
+		    
+		    <!-- buat time end -->
+		    <RelativeLayout 
+		        android:id="@+id/containerEventTimeEndEdit"
+	            android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:background="#FFFFFF"
+			    android:layout_below="@+id/editEventDateHeldStartEdit"
+			    android:visibility="gone">
+			    
+		        <EditText 
+	                android:id="@+id/editEventDateHeldEndEdit"
+	                android:layout_width="100dip"
+			        android:layout_height="40dip"
+			        android:gravity="top|center_horizontal"
+	                android:hint="End at..."
+	                android:textSize="14sp"
+	                android:editable="false"
+	                android:layout_below="@+id/editEventDateHeldStartEdit"
+	                android:layout_marginBottom="5dip"/>
+	            
+			    <ImageView
+					android:id="@+id/imgCalendarEventDateHeldEndEdit"
+					android:layout_width="30dip"
+					android:layout_height="30dip"
+					android:src="@drawable/calendar"
+					android:scaleType="fitCenter"
+					android:layout_toRightOf="@+id/editEventDateHeldEndEdit"
+					android:layout_below="@+id/editEventDateHeldStartEdit"
+					android:layout_marginLeft="2dip" />
+	            
+			    <EditText 
+	                android:id="@+id/editEventTimeHeldEndEdit"
+	                android:layout_width="100dip"
+			        android:layout_height="40dip"
+			        android:gravity="top|center_horizontal"
+	                android:hint="End at..."
+	                android:textSize="14sp"
+	                android:editable="false"
+	                android:layout_below="@+id/editEventDateHeldStartEdit"
+	                android:layout_toLeftOf="@+id/imgTimeEventDateHeldEndEdit"
+	                android:layout_marginBottom="5dip"/>
+			    
+			    <ImageView
+					android:id="@+id/imgTimeEventDateHeldEndEdit"
+					android:layout_width="30dip"
+					android:layout_height="30dip"
+					android:src="@drawable/clock_blue"
+					android:scaleType="fitCenter"
+					android:layout_alignParentRight="true"
+					android:layout_below="@+id/editEventDateHeldStartEdit"
+					android:layout_marginLeft="2dip" />
+		        
+		    </RelativeLayout>
+            
+		    
+		    <Button 
+		        android:id="@+id/buttonConfirmEditEvent"
+		        android:layout_width="100dip"
+		        android:layout_height="40dip"
+		        android:text="Save"
+		        android:textSize="14sp"
+		        android:textStyle="bold"
+		        android:textColor="#FFFFFF"
+		        android:layout_marginTop="20dip"
+		        android:layout_below="@+id/containerEventTimeEndEdit" />
+		    
+		    <Button 
+		        android:id="@+id/buttonCancelEditEvent"
+		        android:layout_width="100dip"
+		        android:layout_height="40dip"
+		        android:text="Close"
+		        android:textSize="14sp"
+		        android:layout_marginTop="20dip"
+		        android:layout_toRightOf="@+id/buttonConfirmEditEvent"
+		        android:layout_below="@+id/containerEventTimeEndEdit" />
+		    
+		</RelativeLayout>
+		
+	</ScrollView>
+
+</LinearLayout>

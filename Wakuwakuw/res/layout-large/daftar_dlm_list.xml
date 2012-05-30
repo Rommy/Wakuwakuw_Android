@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/relativeLayout1"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:padding="5dip"
+	android:background="@drawable/listview_selector_color">
+
+    <ImageView
+    	android:layout_width="60dip"
+    	android:layout_height="60dip"
+    	android:id="@+id/imgViewLogo"
+    	android:src="@drawable/icon"
+    	android:layout_alignParentLeft="true"
+    	android:layout_centerInParent="true"
+    	android:layout_marginRight="5dip">
+    </ImageView>
+
+    <!-- android:textAppearance="?android:attr/textAppearanceLarge" -->
+    <TextView
+    	android:layout_height="wrap_content"
+    	android:layout_width="wrap_content"
+    	android:text="TextView"
+    	android:textSize="16sp"
+    	android:textStyle="bold"
+    	android:textColor="#000000"
+    	android:id="@+id/txtViewJudul"
+    	android:layout_toRightOf="@+id/imgViewLogo"
+    	android:layout_marginLeft="2dip">
+    </TextView>
+    
+    <TextView
+    	android:layout_height="wrap_content"
+    	android:layout_width="wrap_content"
+    	android:text="TextView"
+    	android:textSize="14sp"
+    	android:textColor="#000000"
+    	android:id="@+id/txtViewAlmtAcara"
+    	android:layout_toRightOf="@+id/imgViewLogo"
+    	android:layout_below="@+id/txtViewJudul"
+    	android:layout_marginLeft="2dip"
+    	android:maxLines="5">
+    </TextView>
+    
+    <TextView
+    	android:layout_height="wrap_content"
+    	android:layout_width="wrap_content"
+    	android:text="TextView"
+    	android:textSize="14sp"
+    	android:textColor="#000000"
+    	android:id="@+id/txtViewTglAcara"
+    	android:layout_toRightOf="@+id/imgViewLogo"
+    	android:layout_below="@+id/txtViewAlmtAcara"
+    	android:layout_marginTop="2dip"
+    	android:layout_marginLeft="2dip">
+    </TextView>
+    
+    <TextView
+    	android:layout_height="wrap_content"
+    	android:layout_width="wrap_content"
+    	android:text="TextView"
+    	android:textSize="14sp"
+    	android:textColor="#000000"
+    	android:id="@+id/txtViewJenisAcara"
+    	android:layout_below="@+id/txtViewAlmtAcara"
+    	android:layout_alignParentRight="true"
+    	android:layout_marginTop="2dip">
+    </TextView>  
+    
+    <TextView
+    	android:layout_height="wrap_content"
+    	android:layout_width="wrap_content"
+    	android:text="id"
+    	android:textSize="10sp"
+    	android:textColor="#000000"
+    	android:id="@+id/txtViewIdAcara"
+    	android:layout_below="@+id/txtViewAlmtAcara"
+    	android:layout_toLeftOf="@+id/txtViewJenisAcara"
+    	android:layout_marginTop="2dip"
+    	android:layout_marginRight="5dip"
+    	android:layout_marginLeft="5dip"
+    	android:visibility="gone">
+    </TextView>  
+
+    
+    <!-- ini misalnya mau nampilin penjelasan -->
+    <!--
+    <ImageView
+    	android:layout_width="50dip"
+    	android:layout_height="50dip"
+    	android:id="@+id/imgViewLogo"
+    	android:src="@drawable/icon"
+    	android:layout_alignParentLeft="true"
+    	android:layout_centerInParent="true"
+    	android:scaleType="center">
+    </ImageView>
+
+    <TextView
+    	android:textAppearance="?android:attr/textAppearanceLarge"
+    	android:layout_height="wrap_content"
+    	android:text="TextView"
+    	android:layout_width="wrap_content"
+    	android:id="@+id/txtViewJudul"
+    	android:layout_toRightOf="@+id/imgViewLogo"
+    	android:layout_marginLeft="2dip">
+    </TextView>
+    
+    <TextView
+    	android:layout_height="wrap_content"
+    	android:text="TextView"
+    	android:layout_width="wrap_content"
+    	android:id="@+id/txtViewPenjelasan"
+    	android:layout_toRightOf="@+id/imgViewLogo"
+    	android:layout_below="@+id/txtViewJudul"
+    	android:layout_marginLeft="2dip">
+    </TextView>
+    
+    <TextView
+    	android:layout_height="wrap_content"
+    	android:layout_width="wrap_content"
+    	android:text="TextView"
+    	android:id="@+id/txtViewAlmtAcara"
+    	android:layout_toRightOf="@+id/imgViewLogo"
+    	android:layout_below="@+id/txtViewPenjelasan"
+    	android:layout_marginLeft="2dip"
+    	android:maxLines="5">
+    </TextView>
+    
+    <TextView
+    	android:layout_height="wrap_content"
+    	android:layout_width="wrap_content"
+    	android:text="TextView"
+    	android:id="@+id/txtViewTglAcara"
+    	android:layout_toRightOf="@+id/imgViewLogo"
+    	android:layout_below="@+id/txtViewAlmtAcara"
+    	android:layout_marginLeft="2dip">
+    </TextView>
+    
+    <TextView
+    	android:layout_height="wrap_content"
+    	android:layout_width="wrap_content"
+    	android:text="TextView"
+    	android:textSize="10sp"
+    	android:id="@+id/txtViewJenisAcara"
+    	android:layout_below="@+id/txtViewAlmtAcara"
+    	android:layout_alignParentRight="true">
+    </TextView>  
+    -->
+    
+    
+    
+    <ImageView
+    	android:layout_width="20dip"
+    	android:layout_height="20dip"
+    	android:id="@+id/imgViewLogoMember"
+    	android:src="@drawable/members_icon"
+    	android:layout_toRightOf="@+id/imgViewLogo"
+    	android:layout_below="@+id/txtViewJenisAcara"
+    	android:layout_marginTop="5dip">
+    </ImageView>
+    
+    <TextView
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="2"
+    	android:textSize="12sp"
+    	android:textColor="#000000"
+    	android:id="@+id/txtViewJumlahMember"
+    	android:layout_below="@+id/txtViewJenisAcara"
+    	android:layout_toRightOf="@+id/imgViewLogoMember"
+    	android:layout_marginLeft="3dip"
+    	android:layout_marginRight="15dip"
+    	android:layout_marginTop="5dip">
+    </TextView>
+    
+    <ImageView
+    	android:layout_width="20dip"
+    	android:layout_height="20dip"
+    	android:id="@+id/imgViewLogoComment"
+    	android:src="@drawable/comments_icon"
+    	android:layout_toRightOf="@+id/txtViewJumlahMember"
+    	android:layout_below="@+id/txtViewJenisAcara"
+    	android:layout_marginTop="5dip">
+    </ImageView>
+    
+    <TextView
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="2"
+    	android:textSize="12sp"
+    	android:textColor="#000000"
+    	android:id="@+id/txtViewJumlahComment"
+    	android:layout_below="@+id/txtViewJenisAcara"
+    	android:layout_toRightOf="@+id/imgViewLogoComment"
+    	android:layout_marginLeft="3dip"
+    	android:layout_marginRight="15dip"
+    	android:layout_marginTop="5dip">
+    </TextView>
+    
+    <ImageView
+    	android:layout_width="20dip"
+    	android:layout_height="20dip"
+    	android:id="@+id/imgViewLogoLike"
+    	android:src="@drawable/love_icon"
+    	android:layout_toRightOf="@+id/txtViewJumlahComment"
+    	android:layout_below="@+id/txtViewJenisAcara"
+    	android:layout_marginTop="5dip">
+    </ImageView>
+    
+    <TextView
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="2"
+    	android:textSize="12sp"
+    	android:textColor="#000000"
+    	android:id="@+id/txtViewJumlahLike"
+    	android:layout_toRightOf="@+id/imgViewLogoLike"
+    	android:layout_below="@+id/txtViewJenisAcara"
+    	android:layout_marginLeft="3dip"
+    	android:layout_marginTop="5dip">
+    </TextView>
+
+</RelativeLayout>

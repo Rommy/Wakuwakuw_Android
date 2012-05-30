@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="45dip"
+		android:background="#DDDDDC">
+		  		
+		<ImageButton
+			android:id="@+id/imgButtonBack" android:layout_width="40dip"
+			android:scaleType="fitCenter" android:layout_height="45dip"
+			android:background="@drawable/actionbar_btn" 
+			android:layout_centerVertical="true"
+			android:singleLine="true" android:visibility="visible"
+			android:padding="5dip"
+			android:layout_alignParentLeft="true"
+			android:src="@drawable/back" />
+		
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="45dip"
+			android:id="@+id/imgViewSeparator2"
+			android:src="@drawable/actionbar_separator"
+			android:layout_centerVertical="true"
+			android:layout_toRightOf="@+id/imgButtonBack"
+			android:scaleType="fitCenter">
+		</ImageView>
+				
+		<TextView
+		    android:id="@+id/txtViewHeaderViewOneComment"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Comment"
+			android:textColor="#000000"
+			android:textSize="18sp"
+			android:layout_centerInParent="true"
+			android:layout_toRightOf="@+id/imgViewSeparator2"
+			android:layout_marginLeft="5dip" />
+		
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="45dip"
+			android:id="@+id/imgViewSeparator"
+			android:src="@drawable/actionbar_separator"
+			android:layout_centerVertical="true"
+			android:layout_toLeftOf="@+id/imgButtonRefreshOneComment"
+			android:scaleType="fitCenter">
+		</ImageView>
+		
+		<RelativeLayout
+		    android:id="@+id/containerProgressBarRefreshOneComment"
+			android:layout_width="40dip"
+			android:layout_height="45dip"
+			android:background="#DDDDDC"
+			android:padding="5dip"
+			android:layout_alignParentRight="true">
+			
+			<ProgressBar
+			    style="@android:style/Widget.ProgressBar.Large.Inverse"
+				android:id="@+id/progressBarRefreshOneComment" 
+				android:layout_width="30dip"
+				android:layout_height="30dip"
+				android:padding="5dip"
+				android:layout_centerInParent="true"
+				android:indeterminateOnly="true"
+				android:visibility="gone"/>
+		
+		</RelativeLayout>
+			
+		<ImageButton
+			android:id="@+id/imgButtonRefreshOneComment" 
+			android:layout_width="40dip"
+			android:layout_height="45dip"
+			android:scaleType="center" 
+			android:background="@drawable/actionbar_btn" 
+			android:layout_centerVertical="true" 
+			android:visibility="visible"
+			android:padding="5dip"
+			android:layout_alignParentRight="true"
+			android:src="@drawable/reload_black_small" />
+				
+	</RelativeLayout>
+	
+    
+    <ScrollView
+	    android:id="@+id/scrollViewUserComment"
+	    android:layout_width="fill_parent"
+	    android:layout_height="0dip"
+	    android:layout_weight="1"
+	    android:background="#FFFFFF">  
+	    <LinearLayout 
+		   	android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	    	android:orientation="vertical"
+	    	android:padding="5dip"
+		    android:background="#FFFFFF" >
+			
+			<LinearLayout 
+			   	android:layout_width="fill_parent"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="vertical"
+			    android:background="#FFFFFF" >
+			    
+			    <RelativeLayout 
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginBottom="10dip">
+			        
+				    <ImageView
+						android:id="@+id/imgUser"
+						android:layout_width="40dip"
+						android:layout_height="40dip"
+						android:src="@drawable/icon"
+						android:layout_alignParentLeft="true"
+						android:layout_margin="5dip" />
+					
+					<TextView 
+						android:id="@+id/txtNamaUser"
+						android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+						android:text="Nama Usernya.."
+						android:textColor="#007DCE"
+						android:textSize="16sp"
+						android:textStyle="bold"
+						android:singleLine="false"
+						android:layout_toRightOf="@+id/imgUser" />
+					
+					<TextView 
+						android:id="@+id/txtCommentUser"
+						android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+						android:text="Komen usernya disini loh..."
+						android:textColor="#007DCE"
+						android:textSize="14sp"
+						android:layout_marginTop="5dip"
+						android:layout_toRightOf="@+id/imgUser"
+						android:layout_below="@+id/txtNamaUser" />
+					
+					<TextView 
+						android:id="@+id/txtTglCommentUser"
+						android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+						android:text="Tanggal Komen usernya disini loh..."
+						android:textColor="#007DCE"
+						android:textSize="10sp"
+						android:layout_marginTop="5dip"
+						android:layout_toRightOf="@+id/imgUser"
+						android:layout_below="@+id/txtCommentUser" />	
+			    </RelativeLayout>
+			    
+			</LinearLayout>
+			
+			<LinearLayout 
+			    android:id="@+id/linearUserComment"
+			   	android:layout_width="fill_parent"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="vertical"
+		    	android:paddingLeft="10dip"
+			    android:background="#FFFFFF" >
+			    
+			</LinearLayout>
+			
+		</LinearLayout>
+		
+	</ScrollView>
+	
+    <LinearLayout
+        style="@android:style/ButtonBar"
+        android:id="@+id/linearPostOneComment"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:visibility="visible">
+	    <EditText
+			android:id="@+id/editMyCommentAgain"
+			android:layout_width="0dip"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:hint="Write your comment..."
+			android:layout_margin="3dip"
+			android:textSize="16sp" />
+        
+		<Button
+		    android:id="@+id/buttonSendCommentAgain"
+			android:layout_width="wrap_content"
+			android:layout_height="45dip"
+			android:text="Send"
+			android:layout_gravity="center" />
+	</LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical" >
+	  
+	<RelativeLayout
+		android:id="@+id/headerDetail"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="#DDDDDC">
+		
+	    
+		<ImageButton
+			android:id="@+id/imgButtonBack" android:layout_width="40dip"
+			android:scaleType="fitCenter" android:layout_height="45dip"
+			android:background="@drawable/actionbar_btn" 
+			android:layout_centerVertical="true"
+			android:singleLine="true" android:visibility="visible"
+			android:padding="5dip"
+			android:layout_alignParentLeft="true"
+			android:src="@drawable/back" />
+		
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="45dip"
+			android:id="@+id/imgViewSeparatorEventDetail"
+			android:src="@drawable/actionbar_separator"
+			android:layout_centerVertical="true"
+			android:layout_toRightOf="@+id/imgButtonBack"
+			android:scaleType="fitCenter">
+		</ImageView>
+	    		
+		<TextView
+		    android:id="@+id/txtViewHeaderDetail"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Detail"
+			android:textSize="20sp"
+			android:textColor="#000000"
+			android:gravity="center_horizontal"
+			android:layout_centerInParent="true"
+			android:layout_toRightOf="@+id/imgViewSeparatorEventDetail"
+			android:layout_marginLeft="3dip" />
+		
+		<!--
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="45dip"
+			android:id="@+id/imgViewSeparatorEvent3"
+			android:src="@drawable/actionbar_separator"
+			android:layout_centerVertical="true"
+			android:layout_toLeftOf="@+id/imgButtonViewComment"
+			android:scaleType="fitCenter">
+		</ImageView>
+			
+		<ImageButton
+			android:id="@+id/imgButtonViewComment" android:layout_width="40dip"
+			android:scaleType="fitCenter" android:layout_height="45dip"
+			android:background="@drawable/actionbar_btn" 
+			android:layout_centerVertical="true"
+			android:singleLine="true" android:visibility="visible"
+			android:padding="5dip"
+			android:layout_toLeftOf="@+id/imgViewSeparatorEvent2"
+			android:src="@drawable/comments_bubble" />
+		-->
+		
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="45dip"
+			android:id="@+id/imgViewSeparatorEvent2"
+			android:src="@drawable/actionbar_separator"
+			android:layout_centerVertical="true"
+			android:layout_toLeftOf="@+id/imgButtonViewPhoto"
+			android:scaleType="fitCenter">
+		</ImageView>
+			
+		<ImageButton
+			android:id="@+id/imgButtonViewPhoto" android:layout_width="40dip"
+			android:scaleType="fitCenter" android:layout_height="45dip"
+			android:background="@drawable/actionbar_btn" 
+			android:layout_centerVertical="true"
+			android:singleLine="true" android:visibility="visible"
+			android:padding="5dip"
+			android:layout_toLeftOf="@+id/imgViewSeparatorEvent"
+			android:src="@drawable/photo_thumbnail" />
+		
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="45dip"
+			android:id="@+id/imgViewSeparatorEvent"
+			android:src="@drawable/actionbar_separator"
+			android:layout_centerVertical="true"
+			android:layout_toLeftOf="@+id/imgButtonViewMap"
+			android:scaleType="fitCenter">
+		</ImageView>
+			
+		<ImageButton
+			android:id="@+id/imgButtonViewMap" android:layout_width="40dip"
+			android:scaleType="fitCenter" android:layout_height="45dip"
+			android:background="@drawable/actionbar_btn" 
+			android:layout_centerVertical="true"
+			android:singleLine="true" android:visibility="visible"
+			android:padding="5dip"
+			android:layout_alignParentRight="true"
+			android:src="@drawable/map" />
+		
+	</RelativeLayout>
+	
+	
+	<ScrollView
+	    android:id="@+id/scrollViewFormDetail"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="#FFFFFF">  
+		<RelativeLayout 
+		    xmlns:android="http://schemas.android.com/apk/res/android"
+		   	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:scrollbars="vertical"
+	    	android:padding="5dip"
+		    android:background="#FFFFFF" >
+			<ImageView
+				android:id="@+id/imgDepan"
+				android:layout_width="80dip"
+				android:layout_height="80dip"
+				android:src="@drawable/icon"
+				android:layout_alignParentTop="true"
+				android:layout_alignParentLeft="true"
+				android:layout_margin="10dip" />
+			
+			
+			<RelativeLayout 
+			    android:id="@+id/containerCommentLikeDetail"
+			    android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:layout_toRightOf="@+id/imgDepan"
+		    	android:layout_marginLeft="10dip"
+		    	android:layout_alignTop="@+id/imgDepan">
+		    	
+			    <ImageView
+			    	android:layout_width="20dip"
+			    	android:layout_height="20dip"
+			    	android:id="@+id/imgViewLogoMemberDetail"
+			    	android:src="@drawable/members_icon">
+			    </ImageView>
+			    
+			    <TextView
+			        android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:text="2"
+			    	android:textSize="14sp"
+			    	android:textColor="#000000"
+			    	android:id="@+id/txtViewJumlahMemberDetail"
+			    	android:layout_toRightOf="@+id/imgViewLogoMemberDetail"
+			    	android:layout_marginLeft="5dip"
+			    	android:layout_marginRight="20dip">
+			    </TextView>
+			    
+			    <ImageView
+			    	android:layout_width="20dip"
+			    	android:layout_height="20dip"
+			    	android:id="@+id/imgViewLogoCommentDetail"
+			    	android:src="@drawable/comments_icon"
+			    	android:layout_toRightOf="@+id/txtViewJumlahMemberDetail">
+			    </ImageView>
+			    
+			    <TextView
+			        android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:text="2"
+			    	android:textSize="14sp"
+			    	android:textColor="#000000"
+			    	android:id="@+id/txtViewJumlahCommentDetail"
+			    	android:layout_toRightOf="@+id/imgViewLogoCommentDetail"
+			    	android:layout_marginLeft="5dip"
+			    	android:layout_marginRight="20dip">
+			    </TextView>
+			    
+			    <ImageView
+			    	android:layout_width="20dip"
+			    	android:layout_height="20dip"
+			    	android:id="@+id/imgViewLogoLikeDetail"
+			    	android:src="@drawable/love_icon"
+			    	android:layout_toRightOf="@+id/txtViewJumlahCommentDetail">
+			    </ImageView>
+			    
+			    <TextView
+			        android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:text="2"
+			    	android:textSize="14sp"
+			    	android:textColor="#000000"
+			    	android:id="@+id/txtViewJumlahLikeDetail"
+			    	android:layout_toRightOf="@+id/imgViewLogoLikeDetail"
+			    	android:layout_marginLeft="5dip">
+			    </TextView>
+			</RelativeLayout>
+			
+			<RelativeLayout 
+			    android:id="@+id/containerShare"
+			    android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:layout_toRightOf="@+id/imgDepan"
+		    	android:layout_below="@+id/containerCommentLikeDetail"
+		    	android:layout_marginTop="15dip"
+		    	android:layout_marginBottom="10dip"
+		    	android:layout_marginLeft="10dip"
+		    	android:visibility="visible">
+		    	
+			    <ImageView
+			    	android:layout_width="30dip"
+			    	android:layout_height="30dip"
+			    	android:id="@+id/imgViewLogoFacebook"
+			    	android:src="@drawable/facebook_logo">
+			    </ImageView>
+			    
+			    <ImageView
+			    	android:layout_width="30dip"
+			    	android:layout_height="30dip"
+			    	android:id="@+id/imgViewLogoTwitter"
+			    	android:src="@drawable/twitter_logo"
+			    	android:layout_marginLeft="15dip"
+			    	android:layout_toRightOf="@+id/imgViewLogoFacebook">
+			    </ImageView>
+			    
+			    <ImageView
+			    	android:layout_width="30dip"
+			    	android:layout_height="30dip"
+			    	android:id="@+id/imgViewLogoShare"
+			    	android:src="@drawable/share_logo"
+			    	android:layout_marginLeft="15dip"
+			    	android:layout_toRightOf="@+id/imgViewLogoTwitter">
+			    </ImageView>
+			    
+			</RelativeLayout>
+			
+			
+			<LinearLayout 
+			    android:id="@+id/containerLinear1"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="5dip"
+			    android:layout_below="@+id/imgDepan" >
+			    
+			    <Button 
+			        android:id="@+id/btnAttend"
+			        android:layout_width="0dip"
+			    	android:layout_height="35dip"
+			    	android:layout_weight="1"
+			    	android:text="Attend"/>
+			    
+			    <Button 
+			        android:id="@+id/btnLike"
+			        android:layout_width="0dip"
+			    	android:layout_height="35dip"
+			    	android:layout_weight="1"
+			    	android:text="Like This!"/>
+			    
+			</LinearLayout>
+			
+			<LinearLayout 
+			    android:id="@+id/containerLinear2"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="5dip"
+			    android:layout_below="@+id/containerLinear1"
+			    android:layout_marginBottom="15dip" >
+			    
+			    <Button 
+			        android:id="@+id/btnComment"
+			        android:layout_width="0dip"
+			    	android:layout_height="35dip"
+			    	android:layout_weight="1"
+			    	android:text="Give Comment"/>
+			    
+			    <Button 
+			        android:id="@+id/btnUploadPhoto"
+			        android:layout_width="0dip"
+			    	android:layout_height="35dip"
+			    	android:layout_weight="1"
+			    	android:text="Upload Photo"/>
+			    
+			</LinearLayout>
+			
+			
+			
+			<TextView 
+				android:id="@+id/txtNamaAcara"
+				android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+				android:text="Nama Acaranya disini loh..."
+				android:textColor="#007DCE"
+				android:textSize="20sp"
+				android:textStyle="bold"
+				android:singleLine="false"
+				android:gravity="center_horizontal"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="10dip"
+				android:layout_marginBottom="5dip"
+				android:layout_below="@+id/containerLinear2" />
+			
+			<TextView 
+				android:id="@+id/txtJenisAcara"
+				android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+				android:text="Jenisnya disini loh..."
+				android:textColor="#000000"
+				android:textSize="16sp"
+				android:layout_marginTop="10dip"
+				android:layout_marginBottom="3dip"
+				android:layout_marginLeft="5dip"
+				android:layout_below="@+id/txtNamaAcara" />
+			
+			<View 
+		        android:id="@+id/line1"
+		        android:layout_width="fill_parent"
+		        android:layout_height="1dp"
+		        android:background="#DDDDDC"
+		        android:layout_below="@+id/txtJenisAcara" />
+			
+			<TextView 
+				android:id="@+id/txtTempatAcara"
+				android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+				android:text="Tempatnya disini loh..."
+				android:textColor="#000000"
+				android:textSize="16sp"
+				android:layout_marginBottom="3dip"
+				android:layout_marginLeft="5dip"
+				android:layout_below="@+id/line1" />
+			
+			<View 
+		        android:id="@+id/line2"
+		        android:layout_width="fill_parent"
+		        android:layout_height="1dp"
+		        android:background="#DDDDDC"
+		        android:layout_below="@+id/txtTempatAcara" />
+			
+			<TextView 
+				android:id="@+id/txtWaktuAcara"
+				android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+				android:text="Tanggalnya disini loh..."
+				android:textColor="#000000"
+				android:textSize="16sp"
+				android:layout_marginBottom="3dip"
+				android:layout_marginLeft="5dip"
+				android:layout_below="@+id/line2" />
+			
+			<TextView 
+				android:id="@+id/txtUntil"
+				android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+				android:text="until"
+				android:textColor="#000000"
+				android:textSize="14sp"
+				android:layout_marginBottom="3dip"
+				android:layout_marginLeft="5dip"
+				android:layout_centerHorizontal="true"
+				android:layout_below="@+id/txtWaktuAcara" />
+			
+			<TextView 
+				android:id="@+id/txtWaktuAkhirAcara"
+				android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+				android:text="Monday, Mar 19, 2012 10:30:00 AM"
+				android:textColor="#000000"
+				android:textSize="16sp"
+				android:layout_marginBottom="3dip"
+				android:layout_marginLeft="5dip"
+				android:layout_below="@+id/txtUntil" />
+			
+			<View 
+		        android:id="@+id/line3"
+		        android:layout_width="fill_parent"
+		        android:layout_height="1dp"
+		        android:background="#DDDDDC"
+		        android:layout_below="@+id/txtWaktuAkhirAcara" />
+			
+			<TextView
+			    android:id="@+id/txtDeskripsiAcara"
+			    android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Info dan seterusnya ..... "
+				android:textColor="#000000"
+				android:padding="10dip"
+				android:textSize="14sp"
+				android:singleLine="false"
+				android:layout_marginBottom="3dip"
+				android:layout_marginLeft="5dip"
+				android:layout_alignParentLeft="true"
+				android:layout_below="@+id/line3" />
+			
+			<!-- 
+			<View 
+		        android:id="@+id/line4"
+		        android:layout_width="fill_parent"
+		        android:layout_height="1dp"
+		        android:background="#DDDDDC"
+		        android:layout_marginBottom="5dip"
+		        android:layout_below="@+id/txtDeskripsiAcara" />
+			
+			<EditText
+				android:id="@+id/editComment"
+				android:layout_width="fill_parent"
+				android:layout_height="100dip"
+				android:hint="Write your comment..."
+				android:padding="15dip"
+				android:textSize="16sp"
+				android:gravity="top"
+				android:layout_alignParentLeft="true"
+				android:layout_marginTop="10dip"
+				android:layout_below="@+id/line4" />
+			
+			<Button 
+			    android:id="@+id/buttonComment"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Comment"
+				android:layout_alignParentRight="true"
+				android:layout_below="@+id/editComment" />
+			-->				
+		</RelativeLayout>
+	</ScrollView>
+	
+</LinearLayout>

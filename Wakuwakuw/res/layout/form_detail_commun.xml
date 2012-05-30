@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical" >
+	<RelativeLayout
+		android:id="@+id/headerDetailCommun"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="#DDDDDC">
+				
+		<ImageButton
+			android:id="@+id/imgButtonBack" android:layout_width="40dip"
+			android:scaleType="fitCenter" android:layout_height="45dip"
+			android:background="@drawable/actionbar_btn" 
+			android:layout_centerVertical="true"
+			android:singleLine="true" android:visibility="visible"
+			android:padding="5dip"
+			android:layout_alignParentLeft="true"
+			android:src="@drawable/back" />
+		
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="45dip"
+			android:id="@+id/imgViewSeparatorCommunDetail"
+			android:src="@drawable/actionbar_separator"
+			android:layout_centerVertical="true"
+			android:layout_toRightOf="@+id/imgButtonBack"
+			android:scaleType="fitCenter">
+		</ImageView>
+	    		
+		<TextView
+		    android:id="@+id/txtViewHeaderDetailCommun"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Detail"
+			android:textSize="20sp"
+			android:textColor="#000000"
+			android:gravity="center_horizontal"
+			android:layout_centerInParent="true"
+			android:layout_toRightOf="@+id/imgViewSeparatorCommunDetail"
+			android:layout_marginLeft="3dip" />
+		
+		
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="45dip"
+			android:id="@+id/imgViewSeparatorCommun2"
+			android:src="@drawable/actionbar_separator"
+			android:layout_centerVertical="true"
+			android:layout_toLeftOf="@+id/imgButtonViewPhotoCommun"
+			android:scaleType="fitCenter">
+		</ImageView>
+			
+		<ImageButton
+			android:id="@+id/imgButtonViewPhotoCommun" android:layout_width="40dip"
+			android:scaleType="fitCenter" android:layout_height="45dip"
+			android:background="@drawable/actionbar_btn" 
+			android:layout_centerVertical="true"
+			android:singleLine="true" android:visibility="visible"
+			android:padding="5dip"
+			android:layout_alignParentRight="true"
+			android:src="@drawable/photo_thumbnail" />
+		
+		<!--
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="45dip"
+			android:id="@+id/imgViewSeparatorCommun"
+			android:src="@drawable/actionbar_separator"
+			android:layout_centerVertical="true"
+			android:layout_toLeftOf="@+id/imgButtonViewCommentCommun"
+			android:scaleType="fitCenter">
+		</ImageView>
+			
+		<ImageButton
+			android:id="@+id/imgButtonViewCommentCommun" android:layout_width="40dip"
+			android:scaleType="fitCenter" android:layout_height="45dip"
+			android:background="@drawable/actionbar_btn" 
+			android:layout_centerVertical="true"
+			android:singleLine="true" android:visibility="visible"
+			android:padding="5dip"
+			android:layout_alignParentRight="true"
+			android:src="@drawable/comments_bubble" />
+		-->	
+	</RelativeLayout>
+    
+	<ScrollView
+	    android:id="@+id/scrollViewFormDetailCommun"
+	    android:layout_width="fill_parent"
+	    android:layout_height="0dip"
+	    android:layout_weight="1"
+	    android:background="#FFFFFFFF">
+    
+		<RelativeLayout 
+		   	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:scrollbars="vertical"
+	    	android:paddingLeft="5dip"
+		    android:paddingRight="5dip"
+		    android:paddingBottom="5dip"
+		    android:background="#FFFFFFFF" >
+			<ImageView
+				android:id="@+id/imgDepanCommun"
+				android:layout_width="80dip"
+				android:layout_height="80dip"
+				android:src="@drawable/communities"
+				android:layout_alignParentTop="true"
+				android:layout_alignParentLeft="true"
+				android:layout_margin="10dip" />
+			
+			
+			
+			<RelativeLayout 
+			    android:id="@+id/containerCommentLikeDetailCommun"
+			    android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:layout_toRightOf="@+id/imgDepanCommun"
+		    	android:layout_marginLeft="10dip"
+		    	android:layout_alignTop="@+id/imgDepanCommun">
+		    	
+			    <ImageView
+			    	android:layout_width="20dip"
+			    	android:layout_height="20dip"
+			    	android:id="@+id/imgViewLogoMemberDetailCommun"
+			    	android:src="@drawable/members_icon">
+			    </ImageView>
+			    
+			    <TextView
+			        android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:text="2"
+			    	android:textSize="14sp"
+			    	android:textColor="#000000"
+			    	android:id="@+id/txtViewJumlahMemberDetailCommun"
+			    	android:layout_toRightOf="@+id/imgViewLogoMemberDetailCommun"
+			    	android:layout_marginLeft="5dip"
+			    	android:layout_marginRight="20dip">
+			    </TextView>
+			    
+			    <ImageView
+			    	android:layout_width="20dip"
+			    	android:layout_height="20dip"
+			    	android:id="@+id/imgViewLogoCommentDetailCommun"
+			    	android:src="@drawable/comments_icon"
+			    	android:layout_toRightOf="@+id/txtViewJumlahMemberDetailCommun">
+			    </ImageView>
+			    
+			    <TextView
+			        android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:text="2"
+			    	android:textSize="14sp"
+			    	android:textColor="#000000"
+			    	android:id="@+id/txtViewJumlahCommentDetailCommun"
+			    	android:layout_toRightOf="@+id/imgViewLogoCommentDetailCommun"
+			    	android:layout_marginLeft="5dip"
+			    	android:layout_marginRight="20dip">
+			    </TextView>
+			    
+			    <ImageView
+			    	android:layout_width="20dip"
+			    	android:layout_height="20dip"
+			    	android:id="@+id/imgViewLogoLikeDetailCommun"
+			    	android:src="@drawable/love_icon"
+			    	android:layout_toRightOf="@+id/txtViewJumlahCommentDetailCommun">
+			    </ImageView>
+			    
+			    <TextView
+			        android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:text="2"
+			    	android:textSize="14sp"
+			    	android:textColor="#000000"
+			    	android:id="@+id/txtViewJumlahLikeDetailCommun"
+			    	android:layout_toRightOf="@+id/imgViewLogoLikeDetailCommun"
+			    	android:layout_marginLeft="5dip">
+			    </TextView>
+			</RelativeLayout>
+			
+			
+			<RelativeLayout 
+			    android:id="@+id/containerShareCommun"
+			    android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:layout_below="@+id/containerCommentLikeDetailCommun"
+		    	android:layout_toRightOf="@+id/imgDepanCommun"
+		    	android:layout_marginTop="15dip"
+		    	android:layout_marginBottom="10dip"
+		    	android:layout_marginLeft="10dip"
+		    	android:visibility="visible">
+		    	
+			    <ImageView
+			    	android:layout_width="30dip"
+			    	android:layout_height="30dip"
+			    	android:id="@+id/imgViewLogoFacebookCommun"
+			    	android:src="@drawable/facebook_logo">
+			    </ImageView>
+			    
+			    <ImageView
+			    	android:layout_width="30dip"
+			    	android:layout_height="30dip"
+			    	android:id="@+id/imgViewLogoTwitterCommun"
+			    	android:src="@drawable/twitter_logo"
+			    	android:layout_marginLeft="15dip"
+			    	android:layout_toRightOf="@+id/imgViewLogoFacebookCommun">
+			    </ImageView>
+			    
+			    <ImageView
+			    	android:layout_width="30dip"
+			    	android:layout_height="30dip"
+			    	android:id="@+id/imgViewLogoShareCommun"
+			    	android:src="@drawable/share_logo"
+			    	android:layout_marginLeft="15dip"
+			    	android:layout_toRightOf="@+id/imgViewLogoTwitterCommun">
+			    </ImageView>
+			    
+			</RelativeLayout>
+			
+			
+			<LinearLayout 
+			    android:id="@+id/containerLinear1"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="5dip"
+			    android:layout_below="@+id/imgDepanCommun" >
+			    
+			    <Button 
+			        android:id="@+id/btnJoinCommun"
+			        android:layout_width="0dip"
+			    	android:layout_height="35dip"
+			    	android:layout_weight="1"
+			    	android:text="Join"/>
+			    
+			    <Button 
+			        android:id="@+id/btnLikeCommun"
+			        android:layout_width="0dip"
+			    	android:layout_height="35dip"
+			    	android:layout_weight="1"
+			    	android:text="Like This!"/>
+			    
+			</LinearLayout>
+			
+			<LinearLayout 
+			    android:id="@+id/containerLinear2"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="5dip"
+			    android:layout_below="@+id/containerLinear1"
+			    android:layout_marginBottom="15dip" >
+			    
+			    <Button 
+			        android:id="@+id/btnCommentCommun"
+			        android:layout_width="0dip"
+			    	android:layout_height="35dip"
+			    	android:layout_weight="1"
+			    	android:text="Give Comment"/>
+			    
+			    <Button 
+			        android:id="@+id/btnUploadPhotoCommun"
+			        android:layout_width="0dip"
+			    	android:layout_height="35dip"
+			    	android:layout_weight="1"
+			    	android:text="Upload Photo"/>
+			    
+			</LinearLayout>
+			
+			
+			<TextView 
+				android:id="@+id/txtNamaCommun"
+				android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+				android:text="Nama Communitynya disini loh..."
+				android:textColor="#007DCE"
+				android:textSize="24sp"
+				android:textStyle="bold"
+				android:singleLine="false"
+				android:ellipsize="marquee"
+				android:gravity="center_horizontal"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="10dip"
+				android:layout_marginBottom="5dip"
+				android:layout_below="@+id/containerLinear2" />
+			
+			<TextView 
+				android:id="@+id/txtJenisCommun"
+				android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+				android:text="Kategori Communitynya disini loh..."
+				android:textColor="#000000"
+				android:textSize="18sp"
+				android:singleLine="false"
+				android:ellipsize="marquee"
+				android:layout_marginBottom="3dip"
+				android:layout_marginLeft="5dip"
+				android:layout_below="@+id/txtNamaCommun" />
+			
+			<View 
+		        android:id="@+id/lineComm1"
+		        android:layout_width="fill_parent"
+		        android:layout_height="1dp"
+		        android:background="#DDDDDC"
+		        android:layout_below="@+id/txtJenisCommun" />
+			
+			<TextView 
+				android:id="@+id/txtDeskripsiCommun"
+				android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+				android:text="Deskripsi Communitynya disini loh..."
+				android:textColor="#000000"
+				android:textSize="16sp"
+				android:layout_marginLeft="5dip"
+				android:padding="10dip"
+				android:layout_below="@+id/lineComm1" />
+			
+			<!-- 
+			<View 
+		        android:id="@+id/lineComm2"
+		        android:layout_width="fill_parent"
+		        android:layout_height="1dp"
+		        android:background="#DDDDDC"
+		        android:layout_marginBottom="5dip"
+		        android:layout_below="@+id/txtDeskripsiCommun" />
+			
+			<EditText
+				android:id="@+id/editCommentCommun"
+				android:layout_width="fill_parent"
+				android:layout_height="100dip"
+				android:hint="Write your comment..."
+				android:padding="15dip"
+				android:textSize="16sp"
+				android:gravity="top"
+				android:layout_alignParentLeft="true"
+				android:layout_marginTop="10dip"
+				android:layout_below="@+id/lineComm2" />
+			
+			<Button 
+			    android:id="@+id/buttonCommentCommun"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Comment"
+				android:layout_alignParentRight="true"
+				android:layout_below="@+id/editCommentCommun" />
+			-->			
+				
+		</RelativeLayout>
+	</ScrollView>
+</LinearLayout>

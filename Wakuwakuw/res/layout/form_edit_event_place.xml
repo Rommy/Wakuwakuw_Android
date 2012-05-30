@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <ScrollView 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="#FFFFFF"
+	    android:padding="5dip">
+	    
+        <RelativeLayout
+            android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:background="#FFFFFF">
+		    
+            <TextView 
+                android:id="@+id/txtOpeningEditEventPlace"
+                android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:gravity="center_horizontal"
+		    	android:text="Pinpoint Event Location"
+		    	android:textSize="18sp"
+		    	android:textColor="#000000"
+		    	android:layout_alignParentLeft="true"
+                android:layout_marginBottom="5dip"/>
+            
+            <View 
+		        android:id="@+id/lineEditEventPlace"
+		        android:layout_width="fill_parent"
+		        android:layout_height="1dp"
+		        android:background="#DDDDDC"
+		        android:layout_below="@+id/txtOpeningEditEventPlace"
+		        android:layout_marginBottom="25dip" />
+            
+            <!-- ini bagian pick from map -->
+            <RelativeLayout 
+		        android:id="@+id/containerEditEventPlacePickFromMap"
+	            android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:background="#FFFFFF"
+			    android:layout_below="@+id/lineEditEventPlace"
+			    android:layout_marginBottom="10dip"
+			    android:visibility="visible">
+			    
+                <LinearLayout 
+			        android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:orientation="vertical">
+					
+			        <LinearLayout
+					    android:layout_width="fill_parent"
+					    android:layout_height="wrap_content"
+					    android:orientation="horizontal">
+			            
+			            <AutoCompleteTextView 
+				            android:id="@+id/autoCompleteEditEventPlaceDetail"
+				            android:layout_width="0dip"
+				            android:layout_height="40dip"
+				            android:layout_weight="1"
+				            android:completionThreshold="3"
+				            android:singleLine="true"
+				            android:hint="Type a location, e.g. J.W. Marriot Hotel"
+				            android:textSize="14sp"
+				            android:layout_marginRight="5dip"/>
+			            
+			            <ImageView
+						    android:id="@+id/imgViewEditEventPlacePickFromMap"
+							android:layout_width="wrap_content"
+							android:layout_height="35dip"
+							android:src="@drawable/earth_location" />
+			            
+			        </LinearLayout>
+				</LinearLayout>
+			</RelativeLayout>
+            
+            <!-- ini bagian pick from map -->
+            <RelativeLayout 
+		        android:id="@+id/containerEditEventPlaceAdditionalPickFromMap"
+	            android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:background="#FFFFFF"
+			    android:layout_below="@+id/containerEditEventPlacePickFromMap"
+			    android:layout_marginBottom="10dip"
+			    android:visibility="gone">
+			    
+                <LinearLayout 
+			        android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:orientation="vertical">
+					
+			        <LinearLayout
+					    android:layout_width="fill_parent"
+					    android:layout_height="wrap_content"
+					    android:orientation="horizontal">
+			            
+			            <AutoCompleteTextView 
+				            android:id="@+id/autoCompleteEditEventPlaceDetailAdditional"
+				            android:layout_width="0dip"
+				            android:layout_height="40dip"
+				            android:layout_weight="1"
+				            android:completionThreshold="3"
+				            android:singleLine="true"
+				            android:hint="Type an address eg Street, City, Country"
+				            android:textSize="14sp"
+				            android:layout_marginRight="5dip"/>
+			            
+			            <ImageView
+						    android:id="@+id/imgViewEditEventPlacePickFromMapAdditional"
+							android:layout_width="wrap_content"
+							android:layout_height="35dip"
+							android:src="@drawable/earth_location" />
+			            
+			        </LinearLayout>
+				</LinearLayout>
+			</RelativeLayout>
+            
+            <CheckBox 
+		        android:id="@+id/chkEventAddStreetAddress"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Add Street Address"
+				android:textColor="#000000"
+				android:textSize="14sp"
+				android:layout_below="@+id/containerEditEventPlaceAdditionalPickFromMap"
+				android:layout_marginBottom="20dip"/>
+            
+            <Button 
+		        android:id="@+id/buttonConfirmEditEventPlace"
+		        android:layout_width="100dip"
+		        android:layout_height="40dip"
+		        android:text="Confirm"
+		        android:textSize="14sp"
+		        android:textStyle="bold"
+		        android:textColor="#FFFFFF"
+		        android:layout_below="@+id/chkEventAddStreetAddress" />
+            
+		</RelativeLayout>    
+        
+	</ScrollView>
+
+</LinearLayout>
