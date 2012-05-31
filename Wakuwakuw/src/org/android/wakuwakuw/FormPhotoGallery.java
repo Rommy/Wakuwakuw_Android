@@ -112,6 +112,8 @@ public class FormPhotoGallery extends Activity {
 				imgAdapter = null;
 			}
 			
+			FormPhotoDetail.isiPhotoId = isiPhotoId;
+			
 			return imgAdapter;
 		}
 		

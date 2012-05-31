@@ -20,12 +20,41 @@
         <ImageView
 	        android:id="@+id/imgViewPhotoGalleryDetail"
 	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
+	        android:layout_height="250dip"
 	        android:src="@drawable/notepad"
 	        android:visibility="gone"
 	        android:layout_marginBottom="5dip"
 			android:layout_centerHorizontal="true" />
 	    
+        <RelativeLayout 
+            android:id="@+id/relativeLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/imgViewPhotoGalleryDetail">
+            
+            <ImageView
+                android:id="@+id/imgViewToLeft"
+				android:layout_width="wrap_content"
+				android:layout_height="45dip"
+				android:src="@drawable/arrow_blue_to_left"
+				android:visibility="gone"
+				android:layout_alignParentLeft="true"
+				android:scaleType="fitCenter" />
+            
+            <ImageView
+                android:id="@+id/imgViewToRight"
+				android:layout_width="wrap_content"
+				android:layout_height="45dip"
+				android:src="@drawable/arrow_blue_to_right"
+				android:visibility="gone"
+				android:layout_marginLeft="5dip"
+				android:layout_toRightOf="@+id/imgViewToLeft"
+				android:scaleType="fitCenter" />
+            
+        </RelativeLayout>
+        
         <TextView
 	        android:id="@+id/txtViewPhotoCaption"
 	        android:layout_width="wrap_content"
@@ -36,7 +65,7 @@
 	        android:visibility="gone"
 	        android:layout_centerHorizontal="true"
 	        android:layout_marginBottom="5dip"
-	        android:layout_below="@+id/imgViewPhotoGalleryDetail" />
+	        android:layout_below="@+id/relativeLayout1" />
         
         <TextView
 	        android:id="@+id/txtViewPhotoDate"

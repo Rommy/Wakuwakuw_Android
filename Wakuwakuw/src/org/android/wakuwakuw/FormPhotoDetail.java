@@ -26,17 +26,20 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class FormPhotoDetail extends Activity {
 	
-	private ImageView imgPhotoDetail;
+	private ImageView imgPhotoDetail, imgToLeft, imgToRight;
 	private TextView txtPhotoCaptionDetail, txtPhotoDate;
 	private ProgressBar progBarLoading;
-	private ProgressDialog progressDialog;
 	
 	public static String photoId;
+	public static ArrayList<Drawable> isiPhoto;
+	public static ArrayList<String> isiPhotoId;
 	private Drawable photo;
-	public String URLPhotoDetail, photoCaption, photoDate;
+	public String URLPhoto, URLPhotoDetail, photoCaption, photoDate;
+	public int indexPhoto;
 	
 	public DownloadPhotoDetail donlodPhotoDetail;
 	
@@ -47,6 +50,9 @@ public class FormPhotoDetail extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.form_photo_detail);
 		
+		indexPhoto = isiPhotoId.indexOf(photoId);
+		
+		URLPhoto = "http://wakuwakuw.com/img/photo/" + photoId + "?size=big";
 		URLPhotoDetail = "http://api.wakuwakuw.com/rest/photos/" + photoId;
 		
 		imgPhotoDetail = (ImageView)findViewById(R.id.imgViewPhotoGalleryDetail);
@@ -56,7 +62,65 @@ public class FormPhotoDetail extends Activity {
 		
 		progBarLoading = (ProgressBar)findViewById(R.id.progressBarLoadingPhotoDetail);
 		
-		//progressDialog = ProgressDialog.show(this, null, "Loading");
+		imgToLeft = (ImageView)findViewById(R.id.imgViewToLeft);
+		imgToLeft.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				indexPhoto = indexPhoto - 1;
+				if (indexPhoto >= 0) {
+					progBarLoading.setVisibility(ViewGroup.VISIBLE);
+					imgPhotoDetail.setVisibility(View.GONE);
+					txtPhotoCaptionDetail.setVisibility(View.GONE);
+					txtPhotoDate.setVisibility(View.GONE);
+					imgToLeft.setVisibility(View.GONE);
+					imgToRight.setVisibility(View.GONE);
+					
+					//Toast.makeText(getApplicationContext(), "Indexnya " + Integer.toString(indexPhoto) + " = " + isiPhotoId.get(indexPhoto), Toast.LENGTH_SHORT).show();
+					
+					URLPhoto = "http://wakuwakuw.com/img/photo/" + isiPhotoId.get(indexPhoto) + "?size=big";
+					URLPhotoDetail = "http://api.wakuwakuw.com/rest/photos/" + isiPhotoId.get(indexPhoto);
+					
+					donlodPhotoDetail = new DownloadPhotoDetail();
+					donlodPhotoDetail.execute();
+				}
+				else {
+					indexPhoto = 0;
+					Toast.makeText(getApplicationContext(), "This is the first photo.", Toast.LENGTH_SHORT).show();
+				}
+			}
+		});
+		
+		imgToRight = (ImageView)findViewById(R.id.imgViewToRight);
+		imgToRight.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				indexPhoto = indexPhoto + 1;
+				if (indexPhoto < isiPhotoId.size()) {
+					progBarLoading.setVisibility(ViewGroup.VISIBLE);
+					imgPhotoDetail.setVisibility(View.GONE);
+					txtPhotoCaptionDetail.setVisibility(View.GONE);
+					txtPhotoDate.setVisibility(View.GONE);
+					imgToLeft.setVisibility(View.GONE);
+					imgToRight.setVisibility(View.GONE);
+					
+					//Toast.makeText(getApplicationContext(), "Indexnya " + Integer.toString(indexPhoto) + " = " + isiPhotoId.get(indexPhoto), Toast.LENGTH_SHORT).show();
+					
+					URLPhoto = "http://wakuwakuw.com/img/photo/" + isiPhotoId.get(indexPhoto) + "?size=big";
+					URLPhotoDetail = "http://api.wakuwakuw.com/rest/photos/" + isiPhotoId.get(indexPhoto);
+					
+					donlodPhotoDetail = new DownloadPhotoDetail();
+					donlodPhotoDetail.execute();
+				}
+				else {
+					indexPhoto = isiPhotoId.size() - 1;
+					Toast.makeText(getApplicationContext(), "This is the last photo.", Toast.LENGTH_SHORT).show();
+				}
+			}
+		});
 		
 		donlodPhotoDetail = new DownloadPhotoDetail();
 		donlodPhotoDetail.execute();
@@ -66,9 +130,10 @@ public class FormPhotoDetail extends Activity {
 	public class DownloadPhotoDetail extends AsyncTask<Void, Void, Void> {
 
 		@Override
-		protected Void doInBackground(Void... param) {
+		protected Void doInBackground(Void... URL) {
 			// TODO Auto-generated method stub
-			photo = LoadImageFromWeb("http://wakuwakuw.com/img/photo/" + photoId + "?size=big");
+			//photo = LoadImageFromWeb("http://wakuwakuw.com/img/photo/" + photoId + "?size=big");
+			photo = LoadImageFromWeb(URLPhoto);
 			
 			XMLParser parserPhoto= new XMLParser();
 			String xmlPhoto = parserPhoto.getXmlFromUrl(URLPhotoDetail, Timeline.isiUsername, Timeline.isiPassword);
@@ -92,9 +157,6 @@ public class FormPhotoDetail extends Activity {
 		protected void onPostExecute(Void result) {
 			// TODO Auto-generated method stub
 			//super.onPostExecute(result);
-			
-			//progressDialog.dismiss();
-			
 			progBarLoading.setVisibility(ViewGroup.GONE);
 			
 			imgPhotoDetail.setVisibility(View.VISIBLE);
@@ -105,6 +167,9 @@ public class FormPhotoDetail extends Activity {
 			
 			txtPhotoDate.setText(photoDate);
 			txtPhotoDate.setVisibility(View.VISIBLE);
+			
+			imgToLeft.setVisibility(View.VISIBLE);
+			imgToRight.setVisibility(View.VISIBLE);
 		}
 	}
 	
